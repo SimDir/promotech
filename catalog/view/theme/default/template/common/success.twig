@@ -1,0 +1,28 @@
+{{ header }}
+<section class="content-wrap">
+  <div class="content-block content-width">
+    <div class="sidebar">
+      {{ column_left }}    
+    </div>  
+    
+    <section class="content-section">
+      <div class="bread">
+        {% for breadcrumb in breadcrumbs %}
+          <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
+          {% if(breadcrumb != breadcrumbs|last) %}
+            <span class="bread-text bread-next">
+              <span class="bread-next-line-before"></span>
+              <span class="bread-next-line-after"></span>
+            </span>
+          {% endif %}
+        {% endfor %}
+      </div>
+      
+      <p>{{ text_message }}</p>
+
+
+    </section>
+
+  </div>
+</section>
+{{ footer }}

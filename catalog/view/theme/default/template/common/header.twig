@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir="{{ direction }}" lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ title }}</title>
+  <base href="{{ base }}" />
+  {% if description %}
+  <meta name="description" content="{{ description }}" />
+  {% endif %}
+  {% if keywords %}
+  <meta name="keywords" content="{{ keywords }}" />
+  {% endif %}
+
+  <script src="catalog/view/javascript/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
+
+  
+  <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+  <script src="catalog/view/javascript/slick.min.js" type="text/javascript"></script>
+  <script src="catalog/view/javascript/jquery.fancybox.min.js" type="text/javascript"></script>
+  <script src="catalog/view/javascript/jquery.mask.js" type="text/javascript"></script>
+  <script src="catalog/view/javascript/script.js" type="text/javascript"></script>
+
+  <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="catalog/view/theme/default/stylesheet/slick.css" rel="stylesheet">
+  <link href="catalog/view/theme/default/stylesheet/slick-theme.css" rel="stylesheet">
+  <link href="catalog/view/theme/default/stylesheet/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="catalog/view/theme/default/stylesheet/style.css" rel="stylesheet">
+
+  {% for style in styles %}
+  <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+  {% endfor %}
+  {% for script in scripts %}
+  <script src="{{ script }}" type="text/javascript"></script>
+  {% endfor %}
+  <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+  {% for link in links %}
+  <link href="{{ link.href }}" rel="{{ link.rel }}" />
+  {% endfor %}
+  {% for analytic in analytics %}
+  {{ analytic }}
+  {% endfor %}
+
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="header-top content-width">
+        <a href="{{ home }}" class="header-logo">
+          <img src="{{ logo }}" alt="{{ name }}">
+        </a>
+        <div class="header-top-block">
+          {# {{ search }} #}
+          <div class="header-top-btn">
+            Заказать звонок
+          </div>
+        </div>
+
+        <div class="header-contact">
+          <a href="tel:{{ telephone }}" class="header-number"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>{{ telephone }}</a>
+          <a href="tel:+7 (8422) 76-06-18" class="header-number"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>+7 (8422) 76-06-18</a>
+          <a href="mailto:{{ email }}" class="header-number">{{ email }}</a>
+          <!-- <span class="header-adress">{{ address }}</span> -->
+        </div>
+      </div>
+      {{menu }}
+      
+    </header>
+    
+    <div class="popup">
+      <div class="popup-wrap">
+        <button>&times;</button>
+        <div class="popup-block">
+          <form action="" class="popup-form">
+            <span>Ваше имя:</span>
+            <input type="text" name="name" class="popup-input" placeholder="Иван" required="required">
+            <span>E-mail:</span>
+            <input type="email" name="email" class="popup-input" placeholder="ivan@mail.ru" required="required">
+            <span>Номер телефона:</span>
+            <input type="tel" name="tel" class="popup-input popup-phone" placeholder="+7 (905) 777-77-77" required="required">
+            <span>Сообщение:</span>
+            <textarea name="comments" id=""  class="popup-textarea" maxlength="1000"></textarea>
+            <input type="submit" class="popup-submit" value="Отправить">
+            <span class="after-post">Спасибо Ваша заявка будет обработана. В ближайшее время с Вами свяжется наш специалист.</span>
+          </form>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,56 @@
+﻿{{ header }}
+<section class="content-wrap">
+  <div class="content-block content-width">
+    <div class="sidebar">
+      {{ column_left }}    
+    </div>  
+    
+    <section class="content-section">
+      <div class="bread">
+        {% for breadcrumb in breadcrumbs %}
+          <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
+          {% if(breadcrumb != breadcrumbs|last) %}
+            <span class="bread-text bread-next">
+              <span class="bread-next-line-before"></span>
+              <span class="bread-next-line-after"></span>
+            </span>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% if products %}
+       <div class="catalog fsb">
+        {% for product in products %}
+          <a href="{{ product.href }}" class="catalog-block" background-size: 90%;"> <!-- style="background: url() top no-repeat; -->
+            <img style="width: 100%;" src="{{ product.thumb }}" alt="">
+            <span class="catalog-block-name">{{ product.name }}</span>
+            <span class="catalog-description">{{ product.description }}</span>
+	          <span class="catalog-price">{{ product.price }}</span>
+            <div class="catalog-product-link">
+            </div>
+          </a>
+        {% endfor %}
+        <hr>
+      </div>
+      
+      {{ pagination }}
+      {# </section>   #}
+  {% endif %}
+  {% if childrens %}
+    <div class="catalog fsb1">
+      {% for children in childrens %}
+        <a class="catalog-product1" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
+          <span class="catalog-product-name">{{ children.name }}</span>
+          <div class="catalog-product-link"></div>
+        </a>
+    {# </div> #}
+      {% endfor %}
+    </section>
+  {% endif %}
+  {% if not categories and not products %}
+    <p>{{ text_empty }}</p>
+  </section>
+{% endif %}
+{{ content_bottom }}</div>
+{{ column_right }}</div>
+</section>
+{{ footer }} 
