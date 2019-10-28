@@ -1,32 +1,21 @@
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-// Configuration у
-if (is_file('config.php')) {
-    require_once('config.php');
-}
-// Autoloader
-if (is_file(DIR_STORAGE . 'vendor/autoload.php')) {
-    require_once(DIR_STORAGE . 'vendor/autoload.php');
-}
-if (!empty($_POST["name"])) {
-    $name = $_POST["name"];
-}
-if (!empty($_POST["tel"])) {
-    $tel = $_POST["tel"];
-}
-if (!empty($_POST["email"])) {
-    $mail = $_POST["email"];
-}
-if (!empty($_POST["comments"])) {
-    $comments = $_POST["comments"];
-}
+<? 
+        if( !empty($_POST["name"]) ) {
+            $name = $_POST["name"];
+        }
+        if( !empty($_POST["tel"]) ) {
+            $tel = $_POST["tel"];
+        }
+        if( !empty($_POST["email"]) ) {
+            $mail = $_POST["email"];
+        }
+        if( !empty($_POST["comments"]) ) {
+            $comments = $_POST["comments"];
+        }
 
-$customEmail = "logic@xaker.ru"; //вставь нужную почту получателя
-$email = "$customEmail";
-$subject .= "Заявка с сайта";
-$msg = "
+         $customEmail = "dennis.bochkov@yandex.ru"; //вставь нужную почту получателя
+         $email ="$customEmail";
+         $subject .="Заявка с сайта";
+         $msg = "
 
                 Имя: $name;<br /> 
 
@@ -36,59 +25,67 @@ $msg = "
 
                 Город: $comments;<br />";
 
-function smtp_mail($email, $subject, $msg, $alt_msg = 'HTML is disabled') {
+		function smtp_mail($email, $subject, $msg, $alt_msg = 'HTML is disabled') { 
 
-//    include_once 'lib/class_phpmailer.php';
-//
-//    include_once 'lib/class_smtp.php';
+            include_once 'lib/class_phpmailer.php'; 
 
-    $mail = new PHPMailer();
+            include_once 'lib/class_smtp.php'; 
 
-    $mail->CharSet = 'utf-8';
+            $mail = new PHPMailer(); 
 
-    $mail->SMTPDebug = 2; // use 2 to on this function 
+            $mail->CharSet = 'utf-8'; 
 
-    $mail->isSMTP();
+            $mail->SMTPDebug = 2; // use 2 to on this function 
 
-    $mail->Host = "smtp.yandex.ru";
+            $mail->isSMTP(); 
 
-    $mail->SMTPAuth = true;
+            $mail->Host = "smtp.yandex.ru"; 
 
-    $mail->FromName = 'Сообщение с сайта';
+            $mail->SMTPAuth = true; 
 
-    $mail->Username = "dokc007@yandex.ru";
+            $mail->FromName = 'Сообщение с сайта'; 
 
-    $mail->Password = "1tC4y7527f";
+            $mail->Username = "dokc007@yandex.ru"; 
 
-    // киногерой BATMAN
+            $mail->Password = "1tC4y7527f"; 
 
-    $mail->SMTPSecure = 'ssl';
+            // киногерой BATMAN
 
-    $mail->Port = 465;
+            $mail->SMTPSecure = 'ssl'; 
 
-
-
-    $mail->isHTML(true);
-
-    $mail->addAddress($email);
+            $mail->Port = 465; 
 
 
 
-    $mail->Subject = $subject;
+            $mail->isHTML(true); 
 
-    $mail->Body = $msg;
-
-    $mail->AltBody = $alt_msg;
+            $mail->addAddress($email); 
 
 
 
-    $mail->From = $mail->Username;
+            $mail->Subject = $subject; 
+
+            $mail->Body = $msg; 
+
+            $mail->AltBody = $alt_msg; 
 
 
 
-    return $mail->send();
-}
+            $mail->From = $mail->Username; 
 
-$success = smtp_mail($email, $subject, $msg);
 
-var_dump($success);
+
+            return $mail->send(); 
+
+        }
+
+
+
+        $success = smtp_mail($email, $subject, $msg);  
+
+       
+
+
+
+?>
+
