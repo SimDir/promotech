@@ -1,5 +1,15 @@
 <?php
-
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+// Configuration у
+if (is_file('config.php')) {
+    require_once('config.php');
+}
+// Autoloader
+if (is_file(DIR_STORAGE . 'vendor/autoload.php')) {
+    require_once(DIR_STORAGE . 'vendor/autoload.php');
+}
 if (!empty($_POST["name"])) {
     $name = $_POST["name"];
 }
@@ -13,7 +23,7 @@ if (!empty($_POST["comments"])) {
     $comments = $_POST["comments"];
 }
 
-$customEmail = "dennis.bochkov@yandex.ru"; //вставь нужную почту получателя
+$customEmail = "logic@xaker.ru"; //вставь нужную почту получателя
 $email = "$customEmail";
 $subject .= "Заявка с сайта";
 $msg = "
@@ -28,9 +38,9 @@ $msg = "
 
 function smtp_mail($email, $subject, $msg, $alt_msg = 'HTML is disabled') {
 
-    include_once 'lib/class_phpmailer.php';
-
-    include_once 'lib/class_smtp.php';
+//    include_once 'lib/class_phpmailer.php';
+//
+//    include_once 'lib/class_smtp.php';
 
     $mail = new PHPMailer();
 
@@ -81,3 +91,4 @@ function smtp_mail($email, $subject, $msg, $alt_msg = 'HTML is disabled') {
 
 $success = smtp_mail($email, $subject, $msg);
 
+var_dump($success);

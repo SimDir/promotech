@@ -85,12 +85,12 @@ $(document).ready(function () {
 			$('.loader').fadeIn(300);
 			$.ajax({
 				data: orderForm.serialize(),
-				url: 'send.php',
+				url: '/send.php',
 				type: 'POST',
 				success: function(data) {
 					$('.after-post').fadeIn(300);
 					setTimeout("window.location.reload()",6000);
-				},
+				}
 			});
 			return false;
 		} else {
