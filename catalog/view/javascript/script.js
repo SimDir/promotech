@@ -16,17 +16,17 @@ $(document).ready(function () {
 		}
 
 	});
-	$('.sidebar').addClass('header-disable');
+	$('.header-menu-navigation').addClass('header-disable');
 	$('.burger').on('click', function() {
 		$('.burger').toggleClass('active-burger');
-		if ($('.sidebar').hasClass('header-disable')) {
-			$('.sidebar').removeClass('header-disable');
-			$('.sidebar').addClass('header-active');
+		if ($('.header-menu-navigation').hasClass('header-disable')) {
+			$('.header-menu-navigation').removeClass('header-disable');
+			$('.header-menu-navigation').addClass('header-active');
 			return;
 		}
-		if ($('.sidebar').hasClass('header-active')) {
-			$('.sidebar').removeClass('header-active');
-			$('.sidebar').addClass('header-disable');
+		if ($('.header-menu-navigation').hasClass('header-active')) {
+			$('.header-menu-navigation').removeClass('header-active');
+			$('.header-menu-navigation').addClass('header-disable');
 			return;
 		}
 	});
