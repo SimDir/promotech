@@ -31,7 +31,7 @@ class ControllerCommonFooter extends Controller {
 		$data['newsletter'] = $this->url->link('account/newsletter', '', true);
 		$data['telephone'] = $this->config->get('config_telephone');
 		$data['address'] = $this->config->get('config_address');
-		// $data['logo'] = DIR_IMAGE."log_footer.jpg";
+		// $data['logo'] = DIR_IMAGE."logo_footer.png";
 
 		if ($this->request->server['HTTPS']) {
 			$server = $this->config->get('config_ssl');
