@@ -1,4 +1,10 @@
-/storagepromtech
+/storagepromtech/cache
+/storagepromtech/download
+/storagepromtech/logs
+/storagepromtech/modification
+/storagepromtech/session
+/storagepromtech/upload
+/storagepromtech/vendor
 /config.php
 /admin/config.php
 /system/storage
