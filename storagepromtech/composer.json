@@ -1,0 +1,7 @@
+{
+    "name": "simdir/promotech",
+    "require": {
+        "filp/whoops": "^2.5",
+        "phpmailer/phpmailer": "^6.1"
+    }
+}
