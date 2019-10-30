@@ -1,0 +1,60 @@
+<<<<<<< HEAD
+=======
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo img {
+    width: 70%;
+}
+.header-top-block{
+    padding: 1rem 1rem;
+}
+.header-top-btn-block {
+    display: flex;
+    align-items: center;
+}
+.header-top-btn{
+    width: 200px;
+    border: 2px solid #2ab9fb;
+    text-align: center;
+    line-height: 44px;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #00ade9;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.header-top-btn:hover {
+    color: #fff;
+    background-color: #2ab9fb;
+}
+.header-contact{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: flex-end;
+    align-items: flex-end;
+    align-self: center;
+}
+.header-contact a{
+    color: #2ab9fb;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+.header-contact span{
+    font-size: 12px;
+    text-transform: none;
+}
+>>>>>>> dev
