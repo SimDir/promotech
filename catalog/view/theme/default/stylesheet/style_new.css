@@ -112,6 +112,7 @@
 /* search */
 #search {
     width: 300px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .search-input {
     width: 100%;
