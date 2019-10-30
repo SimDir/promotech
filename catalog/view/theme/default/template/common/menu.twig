@@ -27,9 +27,9 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <form class="form-inline">
+        
             {{ search }}
-        </form>
+        
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" href="{{ home }}">{{ text_home }} </a>
@@ -43,16 +43,19 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ about_company }}">{{ text_about_company }}</a>
             </li>
-            <li class="nav-item">
+            {#<li class="nav-item">
                 <a class="nav-link" href="{{ hrefcart }}">{{ text_cart }} </a>
                 
-            </li>
-            <li class="nav-item">
-                {{ cart }}
-
+            </li>#}
+            
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item avatar">
+                <a class="nav-linkw" href="{{ hrefcart }}">
+                    {{ cart }}
+                </a>
             </li>
         </ul>
-        
         
     </div>
 </nav>
