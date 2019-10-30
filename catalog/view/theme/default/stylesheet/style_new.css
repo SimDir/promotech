@@ -815,3 +815,38 @@ footer{
     cursor: pointer;
 }
 
+.header-shopping-cart{
+    position: relative;
+}
+.header-shopping-cart svg{
+    fill: #fff;
+}
+.header-shopping-cart svg:hover{
+    fill: #f4dff4;
+}
+
+
+.sidebar-title{
+    color: #fff;
+    background-color: #45b8eb;
+    text-transform: uppercase;
+    font-family: "Roboto Regular", sans-serif;
+    font-weight: 100;
+    padding: 15px 25px;
+    font-size: 20px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.header-shopping-num{
+    position: absolute;
+    left: 25px;
+    font-size: 20px;
+    z-index: 9999;
+}
+.mnucart{
+    width: 50px; 
+    height: 100%;
+    background: url(/image/cart.png) no-repeat;
+    background-color: #fff;
+    background-size: cover;
+}
