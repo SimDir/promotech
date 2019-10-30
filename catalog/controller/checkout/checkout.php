@@ -2,9 +2,9 @@
 class ControllerCheckoutCheckout extends Controller {
 	public function index() {
 		// Validate cart has products and has stock.
-		// if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
-		// 	$this->response->redirect($this->url->link('checkout/cart'));
-		// }
+		 if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+		 	$this->response->redirect($this->url->link('checkout/cart'));
+		 }
 
 		// Validate minimum quantity requirements.	
 		unset($this->session->data['payment_address']);
