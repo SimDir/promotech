@@ -10,8 +10,11 @@
 }
 
 /* header Лого */
+.logo {
+    text-align: center;
+}
 .logo img {
-    width: 70%;
+    width: 90%;
 }
 
 /* header Кнопка заказа */
@@ -129,7 +132,28 @@
     cursor: pointer;
     border: none;
 }
-
+.header-shopping-cart{
+    position: relative;
+}
+.header-shopping-cart svg{
+    fill: #fff;
+}
+.header-shopping-cart svg:hover{
+    fill: #f4dff4;
+}
+.header-shopping-num{
+    position: absolute;
+    left: 25px;
+    font-size: 20px;
+    z-index: 9999;
+}
+.cart{
+    width: 50px; 
+    height: 100%;
+    background: url(/image/cart.png) no-repeat;
+    background-color: #fff;
+    background-size: cover;
+}
 
 
 
@@ -551,13 +575,42 @@ footer{
 
 
 
+/* HEADER ADAPTIVE */
+@media (max-width: 992px) {
+    .header-number {
+        font-size: 15px;
+    }
+}
+@media (max-width: 576px) {
+    .header-contact {
+        margin-top: 1rem;
+    }
+}
 
-
+/* MENU ADAPTIVE */
+@media (max-width: 992px) {
+    #search {
+        width: 210px;
+    }
+}
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-nav .nav-link {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }
+}
+/* content products */ 
+@media (max-width: 1199px) {
+    .catalog-product {
+        width: 200px;
+        height: 200px;
+    }
+    .catalog-product-name{
+        top: 55%;
+    }
+}
+@media (max-width: 991px) {
+    
 }
 
 
@@ -698,7 +751,6 @@ footer{
     position: relative;
     background-color: #fff;
 }
-
 .popup-wrap button{
     position: absolute;
     top: 20px; right: 20px;
@@ -709,7 +761,6 @@ footer{
     line-height: 30px;
     cursor: pointer;
 }
-
 .popup-form{
     padding: 30px 35px;
     display: -webkit-flex;
@@ -726,6 +777,7 @@ footer{
     -o-flex-direction: column;
     flex-direction: column;
     width: 400px;
+    height: 80vh;
 }
 .popup-form span{
     font-size: 16px;
@@ -744,7 +796,6 @@ footer{
     max-height: 90px;
     width: 100%;
 }
-
 .popup-submit{
     width: 100%;
     max-width: 200px;
@@ -764,38 +815,3 @@ footer{
     cursor: pointer;
 }
 
-.header-shopping-cart{
-    position: relative;
-}
-.header-shopping-cart svg{
-    fill: #fff;
-}
-.header-shopping-cart svg:hover{
-    fill: #f4dff4;
-}
-
-
-.sidebar-title{
-    color: #fff;
-    background-color: #45b8eb;
-    text-transform: uppercase;
-    font-family: "Roboto Regular", sans-serif;
-    font-weight: 100;
-    padding: 15px 25px;
-    font-size: 20px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-.header-shopping-num{
-    position: absolute;
-    left: 25px;
-    font-size: 20px;
-    z-index: 9999;
-}
-.cart{
-    width: 50px; 
-    height: 100%;
-    background: url(/image/cart.png) no-repeat;
-    background-color: #fff;
-    background-size: cover;
-}
