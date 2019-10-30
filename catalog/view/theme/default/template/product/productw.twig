@@ -1,13 +1,13 @@
 ﻿{{ header }}
 
-<section class="content-wrap">
-  <div class="content-block content-width">
-    <div class="sidebar">
+<section class="container content">
+  <div class="row content-block content-width">
+    <div class="col-3 sidebar">
       {{ column_left }}
     </div>
 
 
-    <section class="content-section">
+    <section class="col-9 content-section">
       <div class="bread">
        {% for breadcrumb in breadcrumbs %}
         <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
