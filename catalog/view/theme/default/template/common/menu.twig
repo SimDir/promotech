@@ -1,5 +1,5 @@
 
-<div class="header-menu">
+{#<div class="header-menu">
 
   <div class="header-menu-wrap content-width">
     <div class="burger">
@@ -19,4 +19,30 @@
      <span class="empty777"></span>
     {{ cart }}
   </div>
-</div> 
+</div> #}
+
+<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-primary">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ home }}">{{ text_home }} </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ our_services }}" target="_blank">{{ text_our_services }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ contact }}">{{ text_contact }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ about_company }}">{{ text_about_company }}</a>
+            </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+            {{ search }}
+        </form>
+    </div>
+</nav>
