@@ -18,7 +18,7 @@
         {% endfor %}
       </div>
       {% if products %}
-       <div class="catalog fsb">
+       <div class="fsb">
         {% for product in products %}
           <a href="{{ product.href }}" class="catalog-block" background-size: 90%;"> <!-- style="background: url() top no-repeat; -->
             <img style="width: 100%;" src="{{ product.thumb }}" alt="">
@@ -36,9 +36,9 @@
       {# </section>   #}
   {% endif %}
   {% if childrens %}
-    <div class="catalog fsb1">
+    <div class="catalog">
       {% for children in childrens %}
-        <a class="catalog-product1" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
+        <a class="catalog-product" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
           <span class="catalog-product-name">{{ children.name }}</span>
           <div class="catalog-product-link"></div>
         </a>

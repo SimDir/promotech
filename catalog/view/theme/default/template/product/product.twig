@@ -111,7 +111,6 @@ $('#button-cart').on('click', function() {
       if (json['success']) {
         console.log(json['success']);
         $('html, body').animate({ scrollTop: 0 }, 'slow');
-
         $('#cart').load('index.php?route=common/cart/info');
       }
     },
