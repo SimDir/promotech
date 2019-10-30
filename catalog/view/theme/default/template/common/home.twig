@@ -1,18 +1,18 @@
 ﻿{{ header }}
 
-<section class="container-fluid">
+<section class="container content">
     <div class="row">
-        <div class="col-2">
+        <div class="col-3 sidebar">
             {{ column_left }}  
         </div>
-        <section class="col-10">
+        <section class="col-9 content-block">
             <h2>Продажа оборудования для видеонаблюдения</h2>
             {{ content_top }}
 
-            <div class="content-product">
-                <div class="catalog">
+            <div class="container content-products">
+                <div class="catalog row">
                     {% for category in categories %}
-                        <div class="catalog-product" style="background: url('{{ category.thumb }}') center no-repeat; background-size: 100%;">
+                        <div class="catalog-product col-md-5" style="background: url('{{ category.thumb }}') center no-repeat; background-size: 100%;">
                             <span class="catalog-product-name">{{ category.name }}</span>
                             <a href="{{ category.href }}" class="catalog-product-link">
                             </a>
