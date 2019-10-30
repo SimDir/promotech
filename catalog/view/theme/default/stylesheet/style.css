@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
 	font-family: "Bebas Neue Bold";
 	src: url("../fonts/bebas-neue-bold.eot#") format("eot"), url("../fonts/bebas-neue-bold.woff") format("woff"), url("../fonts/bebas-neue-bold.woff2") format("woff2"), url("../fonts/bebas-neue-bold.ttf") format("truetype"); }
 	@font-face {
@@ -338,15 +338,11 @@
 					}
 					.sidebar-link:hover{
 						border-left: 3px solid #45b8eb;
-						/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b1ccda+0,196a93+100 */
-						background: #b1ccda; /* Old browsers */
+						background: #b1ccda; 
 						background: -moz-linear-gradient(left, #b1ccda 0%, #196a93 100%); 
-						/* FF3.6-15 */
 						background: -webkit-linear-gradient(left, #b1ccda 0%,#196a93 100%); 
-						/* Chrome10-25,Safari5.1-6 */
 						background: linear-gradient(to right, #b1ccda 0%,#196a93 100%); 
-						/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ccda', endColorstr='#196a93',GradientType=1 ); /* IE6-9 */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ccda', endColorstr='#196a93',GradientType=1 ); 
 
 					}
 					.sidebar-link:nth-child(2n){
@@ -851,7 +847,7 @@
 						margin: 0 auto;
 					}
 					.catalog-product{
-						width: 270px;  /*320px*/
+						width: 270px;  
 						height: 270px;
 						overflow: hidden;
 						position: relative;
@@ -863,7 +859,7 @@
 						
 					}
 					.catalog-product1{
-						width: 200px;  /*320px*/
+						width: 200px;  
 						height: 250px;
 						overflow: hidden;
 						position: relative;
@@ -874,8 +870,7 @@
 						box-shadow: 0 0 15px 3px #B8B8B8;
 					}
 					.catalog-block{
-						width: 230px;  /*250px*/
-						/*height: 210px;*/ /*300px*/
+						width: 230px; 
 						overflow: hidden;
 						position: relative;
 						margin: 18px 15px;
@@ -889,9 +884,6 @@
 						border-radius: 20px;
 					}
 					.catalog-block-name{
-						/*position: absolute;
-						top: 75%;
-						left: 0px;*/
 						display: block;
 						width: 100%;
 						color: #005a87;
@@ -906,9 +898,6 @@
 						padding: 10px 0;
 					}
 					.catalog-price{
-						/*position: absolute;
-						bottom: 10%;
-						left: 0;*/
 						text-align: right;
 						width: 100%;
 						display: inline-block;
@@ -925,15 +914,12 @@
 						width: 100%;
 						color: #fff;
 						
-						/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b1ccda+0,196a93+100 */
-						background: #b1ccda; /* Old browsers */
+					
+						background: #b1ccda;
 						background: -moz-linear-gradient(left, #b1ccda 0%, #196a93 100%); 
-						/* FF3.6-15 */
 						background: -webkit-linear-gradient(left, #b1ccda 0%,#196a93 100%); 
-						/* Chrome10-25,Safari5.1-6 */
 						background: linear-gradient(to right, #b1ccda 0%,#196a93 100%); 
-						/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ccda', endColorstr='#196a93',GradientType=1 ); /* IE6-9 */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ccda', endColorstr='#196a93',GradientType=1 );
 						font-size: 14px;
 						text-align: center;
 						padding: 7px 0;
@@ -1385,7 +1371,7 @@
 						min-width: 320px;
 					}
 					td, th{
-						border: 1px solid black; /* Параметры рамки */
+						border: 1px solid black; 
 						text-align: center;
 						padding: 20px;
 						font-family: 'Roboto Light', sans-serif;
@@ -1619,9 +1605,6 @@
 						.content-product-button{
 							white-space: nowrap;
 						}
-						/* .catalog{
-							padding-bottom: 100px;
-						} */
 						.content-product-wrap, .catalog{
 							-ms-align-items: center;
 							align-items: center;
@@ -1755,15 +1738,11 @@
 							box-shadow: none;
 							color: #fff;
 							border-left: 3px solid #45b8eb;
-							/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b1ccda+0,196a93+100 */
-							background: #b1ccda; /* Old browsers */
+							background: #b1ccda; 
 							background: -moz-linear-gradient(left, #b1ccda 0%, #196a93 100%); 
-							/* FF3.6-15 */
 							background: -webkit-linear-gradient(left, #b1ccda 0%,#196a93 100%); 
-							/* Chrome10-25,Safari5.1-6 */
 							background: linear-gradient(to right, #b1ccda 0%,#196a93 100%); 
-							/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ccda', endColorstr='#196a93',GradientType=1 ); /* IE6-9 */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ccda', endColorstr='#196a93',GradientType=1 );
 						}
 						.header-menu-link:after{
 							display: none;
@@ -2122,7 +2101,7 @@
 						background-position: 0 -15px;
 					}
 
-					/* default font size */
+
 					.fa {
 						font-size: 14px;
 						cursor: pointer;
@@ -2243,4 +2222,4 @@
 	display: none;
 	font-family: 'Roboto Light', sans-serif;
 	font-size: 14px;
-}
+} */
