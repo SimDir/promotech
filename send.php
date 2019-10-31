@@ -1,91 +1,57 @@
-<? 
-        if( !empty($_POST["name"]) ) {
-            $name = $_POST["name"];
-        }
-        if( !empty($_POST["tel"]) ) {
-            $tel = $_POST["tel"];
-        }
-        if( !empty($_POST["email"]) ) {
-            $mail = $_POST["email"];
-        }
-        if( !empty($_POST["comments"]) ) {
-            $comments = $_POST["comments"];
-        }
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-         $customEmail = "dennis.bochkov@yandex.ru"; //вставь нужную почту получателя
-         $email ="$customEmail";
-         $subject .="Заявка с сайта";
-         $msg = "
+// Configuration у
+if (is_file('config.php')) {
+    require_once('config.php');
+}else{
+    die("невозможно загрузить конфигурацию");
+}
+// Autoloader
+if (is_file(DIR_STORAGE . 'vendor/autoload.php')) {
+    require_once(DIR_STORAGE . 'vendor/autoload.php');
+}
 
-                Имя: $name;<br /> 
+if( !empty($_POST["name"]) ) {
+    $name = $_POST["name"];
+}
+if( !empty($_POST["tel"]) ) {
+    $tel = $_POST["tel"];
+}
+if( !empty($_POST["email"]) ) {
+    $mail = $_POST["email"];
+}
+if( !empty($_POST["comments"]) ) {
+    $comments = $_POST["comments"];
+}
 
-                Телефон: $tel;<br /> 
+// Instantiation and passing `true` enables exceptions
+$mail = new PHPMailer(true);
 
-                Почта: $mail;<br />
+try {
+    //Server settings
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    $mail->isSMTP();                                            // Send using SMTP
+    $mail->Host = 'smtp.yandex.ru';                    // Set the SMTP server to send through
+    $mail->SMTPAuth = true;                                   // Enable SMTP authentication
+    $mail->Username = 'dokc007@yandex.ru';                     // SMTP username
+    $mail->Password = '1tC4y7527f';                               // SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
+    //Recipients
+    $mail->setFrom('dennis.bochkov@yandex.ru', 'Mailer');
+    $mail->addAddress($mail, 'mail Robot');     // Add a recipient
 
-                Город: $comments;<br />";
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Заказ звонка с сайта';
+    $mail->Body = $comments;
+    $mail->AltBody = $tel;
 
-		function smtp_mail($email, $subject, $msg, $alt_msg = 'HTML is disabled') { 
-
-            include_once 'lib/class_phpmailer.php'; 
-
-            include_once 'lib/class_smtp.php'; 
-
-            $mail = new PHPMailer(); 
-
-            $mail->CharSet = 'utf-8'; 
-
-            $mail->SMTPDebug = 2; // use 2 to on this function 
-
-            $mail->isSMTP(); 
-
-            $mail->Host = "smtp.yandex.ru"; 
-
-            $mail->SMTPAuth = true; 
-
-            $mail->FromName = 'Сообщение с сайта'; 
-
-            $mail->Username = "dokc007@yandex.ru"; 
-
-            $mail->Password = "1tC4y7527f"; 
-
-            // киногерой BATMAN
-
-            $mail->SMTPSecure = 'ssl'; 
-
-            $mail->Port = 465; 
-
-
-
-            $mail->isHTML(true); 
-
-            $mail->addAddress($email); 
-
-
-
-            $mail->Subject = $subject; 
-
-            $mail->Body = $msg; 
-
-            $mail->AltBody = $alt_msg; 
-
-
-
-            $mail->From = $mail->Username; 
-
-
-
-            return $mail->send(); 
-
-        }
-
-
-
-        $success = smtp_mail($email, $subject, $msg);  
-
-       
-
-
-
-?>
-
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}

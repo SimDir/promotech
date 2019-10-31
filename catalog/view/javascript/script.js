@@ -58,9 +58,9 @@ $(document).ready(function () {
 		$('.product-img-active').attr('src', ''+attributs+'');
 		$('.gallery').attr('href', ''+attributs+'');
 	});
-	$('.header-top-btn').on('click', function () {
+	/*$('.header-top-btn').on('click', function () {
 		$('.popup').addClass('active-popup');
-	});
+	});*/
 	$('.popup-wrap button').on('click', function () {
 		$('.popup').removeClass('active-popup');
 	});
@@ -80,7 +80,7 @@ $(document).ready(function () {
 	orderForm = $('.popup-form');
 	sendBtn = $('.popup-submit');
 	sendBtn.on('click', function() {
-		if (($('.popup-phone').val() != '')) {
+		/*if (($('.popup-phone').val() != '')) {
 			sendBtn.hide();
 			$('.loader').fadeIn(300);
 			$.ajax({
@@ -95,7 +95,7 @@ $(document).ready(function () {
 			return false;
 		} else {
 			personalSqur.addClass('invalid');
-		}
+		}*/
 	});
 
 		// phone.mask("+7(999) 999-9999", options);
