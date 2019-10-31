@@ -1,13 +1,13 @@
 ﻿{{ header }}
 
 <section class="container content">
-  <div class="row content-block content-width">
-    <div class="col-3 sidebar">
+  <div class="row">
+    <div class="col-lg-3 sidebar">
       {{ column_left }}
     </div>
 
 
-    <section class="col-9 content-section">
+    <section class="col-12 col-lg-9 content-block">
       <div class="bread">
        {% for breadcrumb in breadcrumbs %}
         <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
@@ -21,8 +21,8 @@
     </div>
 
     <div class="product" id="product">
-      <div class="product-wrap">
-        <div class="product-wrap">
+      <div class="product-wrap row">
+        <div class="product-wrap1 col-12 col-lg-7 col-xl-7">
           <div class="product-img">
             <a class="gallery" data-fancybox="gallery" href="{{ thumb }}"><img src="{{ thumb }}" alt="" class="product-img-active"></a>
             {% if images %}
@@ -37,7 +37,7 @@
         </div>
 
       </div>
-      <div class="product-info">
+      <div class="product-info col-12 col-lg-5 col-xl-5 pt-5 pt-xl-0">
         <p class="product-text article-text">Актикул товара: {{ sku }}</p>
         <h1 class="product-title">{{ heading_title }}</h1>
         <p class="product-text">Производитель {{ manufacturer }}</p>
@@ -56,7 +56,7 @@
         </div>
         <input type="hidden" name="product_id" value="{{ product_id }}" />
         <div class="product-btn-wrap">
-          <a class="product-add" id="button-cart">{{ text_add }} 
+          <a href="#" class="product-add" id="button-cart">{{ text_add }} 
            {# <svg viewBox="0 -16 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path d="m396 440c5.519531 0 10-4.480469 10-10s-4.480469-10-10-10-10 4.480469-10 10 4.480469 10 10 10zm0 0"/>
                 <path d="m230 440c5.519531 0 10-4.480469 10-10s-4.480469-10-10-10-10 4.480469-10 10 4.480469 10 10 10zm0 0"/>
@@ -67,7 +67,7 @@
           <!-- <a href="" class="product-add">{{ text_get_price }}</a> -->
         </div>
       </div>
-      <div class="product-description">
+      <div class="product-description col-12">
         <span class="product-description-title">Описание</span>
         <p class="product-description-text">{{ description }}</p>
       </div>

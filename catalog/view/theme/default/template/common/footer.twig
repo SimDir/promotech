@@ -1,7 +1,7 @@
 <footer>
-  <div class="content-width">
+  <div class="content-width row">
     <div class="footer-block container">
-      <div class="footer-menu-wrap">
+        <div class="footer-menu-wrap col-12 col-sm-4 col-md-6 col-lg-2">
         <div class="footer-menu">
          <a href="{{ main }}" class="footer-menu-link">{{ text_main }}</a>
          {% for information in informations %}
@@ -10,7 +10,7 @@
         <a href="http://ulprof.ru" class="footer-menu-link" target="_blank">Наши услуги</a>
       </div>
     </div>
-    <div class="footer-center">
+    <div class="footer-center col-12 col-sm-8 col-md-6 col-lg-6">
       {% if logo %}
          <a href="/"><img src="{{ logo }}" alt=""></a>
       {% endif %}
@@ -18,7 +18,7 @@
       <p class="footer-copyright1">{{ text_powered }}</p>
       <p class="footer-copyright1">{{ text_rights }}</p>
     </div>
-    <div class="footer-contact">
+    <div class="footer-contact col-10 col-sm-12 col-md-6 col-lg-4">
       <a href="#" class="footer-contact-link" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>{{ address }}
       </a>
@@ -70,8 +70,9 @@
     <p class="footer-copyright"><a href="{{ link_dev }}" class="footer-copyright" target="_blank">{{ text_dev }}</a></p>
 
 </div>
-</div>
-</div>
+    
+    </div>
+  </div>
 </footer>
 </div>
 
