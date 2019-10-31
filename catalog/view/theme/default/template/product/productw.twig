@@ -21,8 +21,8 @@
     </div>
 
     <div class="product" id="product">
-      <div class="product-wrap">
-        <div class="product-wrap">
+      <div class="product-wrap row">
+        <div class="product-wrap1 col-12 col-lg-7 col-xl-7">
           <div class="product-img">
             <a class="gallery" data-fancybox="gallery" href="{{ thumb }}"><img src="{{ thumb }}" alt="" class="product-img-active"></a>
             {% if images %}
@@ -37,7 +37,7 @@
         </div>
 
       </div>
-      <div class="product-info pt-5 pt-xl-0">
+      <div class="product-info col-12 col-lg-5 col-xl-5 pt-5 pt-xl-0">
         <p class="product-text article-text">Актикул товара: {{ sku }}</p>
         <h1 class="product-title">{{ heading_title }}</h1>
         <p class="product-text">Производитель {{ manufacturer }}</p>
@@ -67,7 +67,7 @@
           <!-- <a href="" class="product-add">{{ text_get_price }}</a> -->
         </div>
       </div>
-      <div class="product-description">
+      <div class="product-description col-12">
         <span class="product-description-title">Описание</span>
         <p class="product-description-text">{{ description }}</p>
       </div>
