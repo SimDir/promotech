@@ -120,8 +120,19 @@
 
 <script>
 $( "#RequestCallModal" ).submit(function( event ) {
-    alert( "Handler for .submit() called." );
     event.preventDefault();
-    $('#RequestCallModal').modal('hide');
+    orderForm = $('#RequestCallModal');
+    $.ajax({
+            data: orderForm.serialize(),
+            url: '/send.php',
+            type: 'POST',
+            success: function(data) {
+                console.log(data);
+                alert( "Спасибо Ваша заявка будет обработана. В ближайшее время с Вами свяжется наш специалист." );
+    
+                $('#RequestCallModal').modal('hide');  
+            }
+    });
+    
 });
 </script>
