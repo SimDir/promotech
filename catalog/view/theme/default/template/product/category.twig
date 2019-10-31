@@ -1,11 +1,11 @@
 ﻿{{ header }}
 <section class="container content">
-  <div class="row content-block content-width">
-    <div class="col-3 sidebar">
+  <div class="row">
+    <div class="col-lg-3 sidebar">
       {{ column_left }}    
     </div>  
     
-    <section class="col-9 content-section">
+    <section class="col-12 col-lg-9 content-block">
       <div class="bread">
         {% for breadcrumb in breadcrumbs %}
           <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
@@ -18,9 +18,9 @@
         {% endfor %}
       </div>
       {% if products %}
-       <div class="catalog fsb">
+       <div class="catalog1 row">
         {% for product in products %}
-          <a href="{{ product.href }}" class="catalog-block" background-size: 90%;"> <!-- style="background: url() top no-repeat; -->
+          <a href="{{ product.href }}" class="catalog-block col-5 col-lg-3" background-size: 90%;"> <!-- style="background: url() top no-repeat; -->
             <img style="width: 100%;" src="{{ product.thumb }}" alt="">
             <span class="catalog-block-name">{{ product.name }}</span>
             <span class="catalog-description">{{ product.description }}</span>
@@ -36,9 +36,9 @@
       {# </section>   #}
   {% endif %}
   {% if childrens %}
-    <div class="catalog fsb1">
+    <div class="catalog row">
       {% for children in childrens %}
-        <a class="catalog-product1" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
+        <a class="catalog-product col-12 col-md-5" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
           <span class="catalog-product-name">{{ children.name }}</span>
           <div class="catalog-product-link"></div>
         </a>
