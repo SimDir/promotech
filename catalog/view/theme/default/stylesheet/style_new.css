@@ -258,6 +258,7 @@
 .content-slide img{
     position: relative;
     height: 100%;
+    width: 100%;
 }
 .content-slide .slick-initialized .slick-slide{
     outline: none;
@@ -281,6 +282,7 @@
     font-size: 26px;
     line-height: 26px;
 } */
+
 .slick-prev{
     left: 25px;
     z-index: 9;
@@ -1494,6 +1496,7 @@ footer{
         font-size: 2rem;
     }
 }
+
 
 
 
