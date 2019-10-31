@@ -87,27 +87,27 @@
 <form action="" class="modal fade" id="RequestCallModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
 
-        <div class="modal-content">
-            <div class="modal-header title-header-pop">
-                <h5 class="modal-title" id="exampleModalLabel">Заказать звонок</h5>
+        <div class="modal-content popup-form">
+            <div class="modal-header header-pop-modal">
+                <h5 class="modal-title title-pop-modal" id="exampleModalLabel">Заказать звонок</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <span class="cross" aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body body-pop-modal">
 
-                    <span>Ваше имя:</span>
+                    <span class="title-input-modal">Ваше имя:</span>
                     <input type="text" name="name" class="popup-input" placeholder="Иван" required="required">
-                    <span>E-mail:</span>
+                    <span class="title-input-modal">E-mail:</span>
                     <input type="email" name="email" class="popup-input" placeholder="ivan@mail.ru" required="required">
-                    <span>Номер телефона:</span>
+                    <span class="title-input-modal">Номер телефона:</span>
                     <input type="tel" name="tel" class="popup-input popup-phone" placeholder="+7 (905) 777-77-77" required="required">
-                    <span>Сообщение:</span>
+                    <span class="title-input-modal">Сообщение:</span>
                     <textarea name="comments" id=""  class="popup-textarea" maxlength="1000"></textarea>
 
 
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer footer-pop-modal">
                 <!--<input type="submit" class="popup-submit" value="Отправить">
                 <span class="after-post">Спасибо Ваша заявка будет обработана. В ближайшее время с Вами свяжется наш специалист.</span>-->
                 <button type="button" class="cancelbtn btn btn-secondary" data-dismiss="modal">Отмена</button>
