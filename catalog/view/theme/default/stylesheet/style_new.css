@@ -748,11 +748,6 @@ footer{
     cursor: pointer;
 }
 /* характеристики товара */
-.product-info{
-    /* width: 45%;
-    min-width: 320px;
-    flex-grow: 1; */
-}
 .product-text{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
@@ -1057,13 +1052,11 @@ footer{
 .news-date-text{
     font-size: 15px;
 }
-
 .shopping-wrap table{
     width: 100%;
     border-collapse: collapse;
     min-width: 320px;
 }
-
 .shopping-wrap table{
     width: 100%;
     border-collapse: collapse;
