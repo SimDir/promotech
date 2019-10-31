@@ -41,7 +41,7 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
     //Recipients
-    $mail->setFrom('mail@ee.ru', 'Mailer');
+    $mail->setFrom($mail, 'Mailer');
     $mail->addAddress('logic@xaker.ru', 'mail Robot');     // Add a recipient 'dennis.bochkov@yandex.ru'
 
     // Content
