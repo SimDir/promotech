@@ -1,8 +1,4 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 /* header */
 .header-top-block{
     padding: 1rem 1rem;
@@ -79,9 +75,9 @@
     padding: 0 1rem;
     height: 3rem;
 }
-.collapse {
+/*.collapse {
     height: 100%;
-}
+}*/
 .navbar-nav {
     height: 100%;
 }
@@ -786,16 +782,15 @@ footer{
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 }
-.header-shopping-num{
-    position: absolute;
+.mnunum{
+    position: relative;
     left: 25px;
     font-size: 20px;
     z-index: 9999;
 }
 .mnucart{
     width: 50px; 
-    height: 100%;
+    height: 48px;
     background: url(/image/cart.png) no-repeat;
-    background-color: #fff;
     background-size: cover;
 }

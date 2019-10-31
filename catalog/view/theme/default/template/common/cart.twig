@@ -1,11 +1,13 @@
+<a href="{{ cart }}">
 {% if quantity>0 %}
 
     <div id="cart" class="mnucart" style="background-color: yellow">
-      <div class="header-shopping-num" id="cardcaunt">{{ quantity }}</div>
+      <div class="mnunum" id="cardcaunt">{{ quantity }}</div>
     </div>
 {% else %}
     <div id="cart" class="mnucart" style="background-color: #005a87">
-        <div class="header-shopping-num" id="cardcaunt">{{ quantity }}</div>
+        <div class="mnunum" id="cardcaunt">{{ quantity }}</div>
     </div>
     
 {% endif %}
+</a>
