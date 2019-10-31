@@ -1,53 +1,45 @@
 <nav class="menu navbar sticky-top navbar-expand-lg">
-    <div class="container-fluid">
-        <div class="row align-items-start">
-            <div class="col">
-                {{ search }}
-            </div>
-        </div>
-            
-                
+    <div class="container-fluid">      
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="menu-btn navbar-toggler-icon">Меню</span>
         </button>
+        
+        <div class="align-items-start">
+            <div class="col">
+                {{ search }}
+            </div>
+        </div>    
             
-            
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                <ul class="navbar-nav align-self-end" id="nav">
-                    <ul class="inmenu navbar-nav mr-auto">
-                        <li class="nav-item limenu">
-                            <a class="nav-link amenu" href="{{ home }}">{{ text_home }} </a>
-                        </li>
-                        <li class="nav-item limenu">
-                            <a class="nav-link amenu" href="{{ our_services }}" target="_blank">{{ text_our_services }}</a>
-                        </li>
-                        <li class="nav-item limenu">
-                            <a class="nav-link amenu" href="{{ contact }}">{{ text_contact }}</a>
-                        </li>
-                        <li class="nav-item limenu">
-                            <a class="nav-link amenu" href="{{ about_company }}">{{ text_about_company }}</a>
-                        </li>
-                       <li class="nav-item limenu">
-                            <a class="nav-link amenu" href="{{ hrefcart }}">{{ text_cart }} </a>
-
-                        </li>
-
-                    </ul>
-                    <li class="nav-item dropdown d-none">
-                        <a class="nav-link dropdown-toggl" href="#" id="navbarDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <span class="navbar-toggler-icon"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right bg-info" aria-labelledby="navbarDropdownMenu">
-                        </ul>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav align-self-end" id="nav">
+                <ul class="inmenu navbar-nav mr-auto">
+                    <li class="nav-item limenu">
+                        <a class="nav-link amenu" href="{{ home }}">{{ text_home }} </a>
                     </li>
+                    <li class="nav-item limenu">
+                        <a class="nav-link amenu" href="{{ our_services }}" target="_blank">{{ text_our_services }}</a>
+                    </li>
+                    <li class="nav-item limenu">
+                        <a class="nav-link amenu" href="{{ contact }}">{{ text_contact }}</a>
+                    </li>
+                    <li class="nav-item limenu">
+                        <a class="nav-link amenu" href="{{ about_company }}">{{ text_about_company }}</a>
+                    </li>
+                   <li class="nav-item limenu">
+                        <a class="nav-link amenu" href="{{ hrefcart }}">{{ text_cart }} </a>
+
+                    </li>
+
                 </ul>
-            </div>
-                      
-            <div class="row align-items-end">
-                <div class="col">
-                {{ cart }}
-                </div>
-            </div>
+                
+            </ul>
+        </div>
+
+        
+            
+            {{ cart }}
+            
+        
         
     </div>
 </nav>
