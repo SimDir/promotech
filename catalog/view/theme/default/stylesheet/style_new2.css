@@ -607,4 +607,99 @@
     width: 100%;
     border-collapse: collapse;
     min-width: 320px;
-} */
+}
+
+.shopping-wrap table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 320px;
+}
+.table-price{
+    font-family: 'Roboto Regular', sans-serif;
+}
+.table-bt{
+    border-top: none;
+    text-align: right;
+    font-family: 'Roboto Regular', sans-serif;
+}
+.table-align{
+    text-align: left;
+}
+.shopping-wrap table td:nth-child(1){
+    min-width: 88px;
+
+}
+
+.shopping-form-title{
+    font-size: 20px;
+    font-family: 'Roboto Regular', sans-serif;
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+.shopping-form-wrap{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+.shopping-form-block{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    max-width: 340px;
+    width: 100%;
+    margin-right: 30px;
+}
+.shopping-form-input{
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid #999999;
+    max-width: 340px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Roboto Light', sans-serif;
+}
+.shopping-form-submit{
+    width: 157px;
+    height: 45px;
+    background-color: #00ade9;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 22px;
+    box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.2);
+    margin-top: 15px;
+    cursor: pointer;
+}
+.shopping-form-radio{
+    padding-bottom: 20px;
+}
+.shopping-form-radio label{
+    font-size: 15px;
+    font-family: 'Roboto Light', sans-serif;
+}
+.shopping-inform{
+    padding-top: 45px;
+}
+.shopping-inform p{
+    font-size: 15px;
+}
+.shopping-inform ul{
+    padding-left: 45px;
+}
+.shopping-inform ul li{
+    padding-top: 20px;
+    color: #005a87;
+}
+.shopping-inform ul li p{
+    color: #0f0e0d;
+}
