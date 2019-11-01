@@ -12,7 +12,7 @@
             $comments = $_POST["comments"];
         }
 
-         $customEmail = "dennis.bochkov@yandex.ru"; //вставь нужную почту получателя
+         $customEmail = "logic@xaker.ru"; //вставь нужную почту получателя
          $email ="$customEmail";
          $subject .="Заявка с сайта";
          $msg = "
@@ -86,4 +86,7 @@
        
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev2
