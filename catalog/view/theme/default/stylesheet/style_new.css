@@ -1172,6 +1172,38 @@ footer{
 } 
 
 
+/* СТРАНИЦА КОРЗИНЫ */
+.table {
+    margin-top: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #EDEDED;
+}
+.cart-titile-tr {
+    font-weight: 400;
+    color: #fff;
+    font-size: 18px;
+    background-color: #5F5F5F;
+}
+.text-right {
+    text-align-last: left!important;
+}
+.cart-titile-tr td {
+    border: 1px solid #fff;
+}
+.card-header {
+    background-color: #5F5F5F;
+}
+.card-header h4{
+    font-weight: 400;
+    color: #fff;
+    font-size: 18px;
+}
+.card-title a{
+    font-weight: 400;
+    color: #fff;
+    font-size: 18px;
+}
+
 
 
 
