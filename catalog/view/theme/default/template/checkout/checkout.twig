@@ -299,6 +299,7 @@ $(document).delegate('#button-register', 'click', function() {
                         $('#button-register').button('reset');
                     },
                     success: function(html) {
+                        console.log(html)
                         $('#collapse-payment-address .panel-body').html(html);
 
                         $('#collapse-payment-address').parent().find('.card-header .card-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle">{{ text_checkout_payment_address }} <i class="fa fa-caret-down"></i></a>');
