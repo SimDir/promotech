@@ -1098,6 +1098,13 @@ footer{
 tbody td {
     border: 1px solid #D3D3D3;
 }
+.form-control {
+    min-width: 30px;
+}
+.input-group-btn {
+    display: flex;
+    justify-content: center;
+}
 .table-price{
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -1155,6 +1162,7 @@ tbody td {
 }
 .form-control {
     font-family: 'Roboto Condensed', sans-serif;
+    padding: .375rem;
 }
 .shopping-form-radio label{
     font-size: 15px;
@@ -1560,6 +1568,35 @@ tbody td {
         font-size: 2rem;
     }
 }
+
+/* СТРАНИЦА КОРЗИНА */
+@media (max-width: 768px) {
+    .cart-titile-tr {
+        font-size: 15px;
+    }
+    .input-group {
+        justify-content: center;
+    }
+    .table td, .table th {
+        padding: 0.375rem;
+    }
+}
+@media (max-width: 470px) {
+    
+    .table-align {
+        font-size: 15px;
+    }
+    
+}
+@media (max-width: 462px) { 
+    .input-group-btn {
+        margin-top: .6rem;
+    }
+    /* .table-top {
+        min-width: 250px;
+    } */
+}
+
 
 
 
