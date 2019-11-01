@@ -141,8 +141,20 @@ class ControllerCheckoutGuest extends Controller {
 		
 		$this->response->setOutput($this->load->view('checkout/guest', $data));
 	}
+    private function validate_russian_phone_number($tel) {
+        $tel = trim((string) $tel);
+        if (!$tel)
+            return false;
+        $tel = preg_replace('#[^0-9+]+#uis', '', $tel);
+        if (!preg_match('#^(?:\\+?7|8|)(.*?)$#uis', $tel, $m))
+            return false;
+        $tel = '+7' . preg_replace('#[^0-9]+#uis', '', $m[1]);
+        if (!preg_match('#^\\+7[0-9]{10}$#uis', $tel, $m))
+            return false;
+        return $tel;
+    }
 
-	public function save() {
+    public function save() {
 		$this->load->language('checkout/checkout');
 
 		$json = array();
@@ -176,10 +188,12 @@ class ControllerCheckoutGuest extends Controller {
 			}
 
 			if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
-
+                            
 				$json['error']['telephone'] = $this->language->get('error_telephone');
 			}
-
+                        if(!$this->validate_russian_phone_number($this->request->post['telephone'])){
+                                $json['error']['telephone'] ='Телефон задан в неверном формате'.PHP_EOL.'8xxxxxxxxxx либо +7xxxxxxxxxx';
+                        }
 			if ((utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128)) {
 				if (empty($this->request->post['address_1'])) {
 					$this->request->post['address_1'] = '-';
