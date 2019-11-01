@@ -1,62 +1,89 @@
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+<?php 
+        if( !empty($_POST["name"]) ) {
+            $name = $_POST["name"];
+        }
+        if( !empty($_POST["tel"]) ) {
+            $tel = $_POST["tel"];
+        }
+        if( !empty($_POST["email"]) ) {
+            $mail = $_POST["email"];
+        }
+        if( !empty($_POST["comments"]) ) {
+            $comments = $_POST["comments"];
+        }
 
-// Configuration у
-if (is_file('config.php')) {
-    require_once('config.php');
-}else{
-    die("невозможно загрузить конфигурацию");
-}
-// Autoloader
-if (is_file(DIR_STORAGE . 'vendor/autoload.php')) {
-    require_once(DIR_STORAGE . 'vendor/autoload.php');
-}
+         $customEmail = "dennis.bochkov@yandex.ru"; //вставь нужную почту получателя
+         $email ="$customEmail";
+         $subject .="Заявка с сайта";
+         $msg = "
 
-if( !empty($_POST["name"]) ) {
-    $name = $_POST["name"];
-}
-if( !empty($_POST["tel"]) ) {
-    $tel = $_POST["tel"];
-}
-if( !empty($_POST["email"]) ) {
-    $pmail = $_POST["email"];
-}
-if( !empty($_POST["comments"]) ) {
-    $comments = $_POST["comments"];
-}
-//var_dump($_POST);
-//die();
-$headers = 'From: webmaster@example.com' . "\r\n" .
-        'Reply-To: webmaster@example.com' . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
-$message = "Заказ звонка с сайта".PHP_EOL."от почта клиента $pmail ".PHP_EOL."телефонный номер клиента $tel ".PHP_EOL."клиет оствил следующее сообщение ".PHP_EOL."$comments";
-mail('dennis.bochkov@yandex.ru', 'Заказ звонка с сайта', $message,$headers);
-die();
-$mail = new PHPMailer(true);
-try {
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-    $mail->isSMTP();                                            // Send using SMTP
-    $mail->Host = 'smtp.yandex.ru';                    // Set the SMTP server to send through
-    $mail->SMTPAuth = true;                                   // Enable SMTP authentication
-    $mail->Username = 'dokc007';                     // SMTP username
-    $mail->Password = '1tC4y7527f';                               // SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-    $mail->Port = 465;                                    // TCP port to connect to
-    //Recipients
-    $mail->setFrom('dokc007@yandex.ru', 'Mailer');
-    $mail->addAddress('logic@xaker.ru', 'mail Robot');     // Add a recipient 'dennis.bochkov@yandex.ru'
+                Имя: $name;<br /> 
 
-    // Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Заказ звонка с сайта';
-    $mail->Body = $message;
-    $mail->AltBody = $tel;
+                Телефон: $tel;<br /> 
 
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
+                Почта: $mail;<br />
+
+                Город: $comments;<br />";
+
+		function smtp_mail($email, $subject, $msg, $alt_msg = 'HTML is disabled') { 
+
+            include_once 'lib/class_phpmailer.php'; 
+
+            include_once 'lib/class_smtp.php'; 
+
+            $mail = new PHPMailer(); 
+
+            $mail->CharSet = 'utf-8'; 
+
+            $mail->SMTPDebug = 2; // use 2 to on this function 
+
+            $mail->isSMTP(); 
+
+            $mail->Host = "smtp.yandex.ru"; 
+
+            $mail->SMTPAuth = true; 
+
+            $mail->FromName = 'Сообщение с сайта'; 
+
+            $mail->Username = "dokc007@yandex.ru"; 
+
+            $mail->Password = "1tC4y7527f"; 
+
+            // киногерой BATMAN
+
+            $mail->SMTPSecure = 'ssl'; 
+
+            $mail->Port = 465; 
+
+
+
+            $mail->isHTML(true); 
+
+            $mail->addAddress($email); 
+
+
+
+            $mail->Subject = $subject; 
+
+            $mail->Body = $msg; 
+
+            $mail->AltBody = $alt_msg; 
+
+
+
+            $mail->From = $mail->Username; 
+
+
+
+            return $mail->send(); 
+
+        }
+
+
+
+        $success = smtp_mail($email, $subject, $msg);  
+
+       
+
+
+
