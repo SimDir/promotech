@@ -1288,7 +1288,7 @@ footer{
     }
 }
 @media (max-width: 992px) {
-    .menu {
+    /* .menu {
         position: relative;
         justify-content: flex-start;
     }
@@ -1315,6 +1315,76 @@ footer{
     }
     .amenu {
         
+    } */
+    .header-menu-wrap{
+        position: relative;
+        justify-content: flex-start;
+    }
+    .header-sidebar{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-around;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+    }
+    .header-sidebar .header-menu-link{
+        padding: 15px 50px;
+    }
+    .header-menu-navigation{
+        position: absolute;
+        z-index: 9999;
+        width: 100%;
+        max-width: 480px;
+        top: 100%; left: 0;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        background-color: #fff;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+        background-color: #005884;
+    }
+    .header-active{
+        -webkit-animation: slideRight .5s forwards;
+        -o-animation: slideRight .5s forwards;
+        animation: slideRight .5s forwards;
+    }
+    .header-disable{
+        -webkit-animation: slideLeft .5s forwards;
+        -o-animation: slideLeft .5s forwards;
+        animation: slideLeft .5s forwards;
+    }
+    .header-menu-link{
+        color: #fff;
+        width: 100%;
+    }
+    .header-menu-link:hover{
+        box-shadow: none;
+        color: #fff;
+        border-left: 3px solid #45b8eb;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b1ccda+0,196a93+100 */
+        background: #b1ccda; /* Old browsers */
+        background: -moz-linear-gradient(left, #b1ccda 0%, #196a93 100%); 
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #b1ccda 0%,#196a93 100%); 
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #b1ccda 0%,#196a93 100%); 
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ccda', endColorstr='#196a93',GradientType=1 ); /* IE6-9 */
+    }
+    .header-menu-link:after{
+        display: none;
     }
 }
     
