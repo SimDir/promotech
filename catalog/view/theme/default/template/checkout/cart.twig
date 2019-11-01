@@ -22,7 +22,7 @@
 {#				<h1>{{ heading_title }}eee</h1>#}
 				<form action="{{ action }}" method="post" enctype="multipart/form-data">
 					<div class="shopping-wrap">
-						<table class="table table-hover">
+						<table class="table-top table table-hover">
 							<thead>
 								<tr class="cart-titile-tr">
 									<td class="text-left">{{ column_image }}</td>
@@ -52,13 +52,13 @@
 
 							</tbody>
 						</table>
-						<table>
+						<table class="table-bottom table">
 							<tbody>
-								<tr>
+								{# <tr> #}
 									<tr>
-										<td class="table-bt">{{ text_sum}} {{ totals|last.text }}</td>
+										<td class="table-bottom-bt">{{ text_sum }} {{ totals|last.text }}</td>
 									</tr>
-								</tr>
+								{# </tr> #}
 							</tbody>
 						</table>
 					</form>
