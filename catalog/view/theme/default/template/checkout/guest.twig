@@ -88,6 +88,13 @@
 </div>
 
 <script type="text/javascript"><!--
+$(document).on('keypress',function(e) {
+    if(e.which == 13) {
+        e.preventDefault();
+        //alert('You pressed enter!');
+    }
+    
+});
 // Sort the custom fields
 $('#account .form-group[data-sort]').detach().each(function() {
   if ($(this).attr('data-sort') >= 0 && $(this).attr('data-sort') <= $('#account .form-group').length) {
