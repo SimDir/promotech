@@ -1,7 +1,7 @@
 <div class="shopping-form">
     <h3 class="shopping-form-title">Данные для оплаты</h3>
     <div class="shopping-form-wrap" id="accordion">
-        <div class="card"  style="display: none">
+        <div class="cardW"  style="display: none">
             <div class="card-header">
                 <h4 class="card-title">{{ text_checkout_option }}</h4>
             </div>
@@ -15,7 +15,7 @@
                     <h4 class="card-title">{{ text_checkout_account }}</h4>
                 </div>
                 <div class="collapse" id="collapse-payment-address">
-                    <div class="panels-body"></div>
+                    <div class="panel-body"></div>
                 </div>
             </div>
         {% else %}
@@ -46,7 +46,7 @@
                 </div>
             </div>
         {% endif %}
-        <div class="card" style="display:none">
+        <div class="cardW" style="display:none">
             <div class="card-header">
                 <h4 class="card-title">{{ text_checkout_payment_method }}</h4>
             </div>
@@ -54,7 +54,7 @@
                 <div class="panel-body"></div>
             </div>
         </div>
-        <div class="card" style="display:none">
+        <div class="cardW" style="display:none">
             <div class="card-header">
                 <h4 class="card-title">{{ text_checkout_confirm }}</h4>
             </div>
@@ -299,7 +299,6 @@ $(document).delegate('#button-register', 'click', function() {
                         $('#button-register').button('reset');
                     },
                     success: function(html) {
-                        console.log(html)
                         $('#collapse-payment-address .panel-body').html(html);
 
                         $('#collapse-payment-address').parent().find('.card-header .card-title').html('<a href="#collapse-payment-address" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle">{{ text_checkout_payment_address }} <i class="fa fa-caret-down"></i></a>');
