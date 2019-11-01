@@ -32,8 +32,8 @@ $headers = 'From: webmaster@example.com' . "\r\n" .
         'Reply-To: webmaster@example.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 $message = "Заказ звонка с сайта".PHP_EOL."от почта клиента $pmail ".PHP_EOL."телефонный номер клиента $tel ".PHP_EOL."клиет оствил следующее сообщение ".PHP_EOL."$comments";
-mail('dennis.bochkov@yandex.ru', 'Заказ звонка с сайта', $message,$headers);
-die();
+// mail('wizardhype1998@gmail.com', 'Заказ звонка с сайта', $message,$headers);
+// die();
 $mail = new PHPMailer(true);
 try {
     //Server settings

@@ -1107,32 +1107,35 @@ tbody td {
     border-collapse: collapse;
     min-width: 88px;
     font-family: 'Roboto Condensed', sans-serif; 
-    background-color: #D3D3D3;
+    background-color: #EDEDED;
 }
 .table-bottom-bt{
     border-top: none;
     text-align: right;
-    font-weight: bold;
+    color: #4A4A4A;
 }
 
 
 .shopping-form-title{
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: bold;
     color: #595959;
     font-family: 'Roboto Condensed', sans-serif;
     padding: 2rem 0 0rem;
     text-align: center;
 }
-
-
-
-
 .shopping-form-wrap{
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
 }
 .shopping-form-block{
     display: -webkit-flex;
@@ -1147,42 +1150,44 @@ tbody td {
     flex-direction: column;
     max-width: 340px;
     width: 100%;
-    margin-right: 30px;
+    background-color: #f1f1f1;
+    padding: 2rem 1rem 0;
 }
-.shopping-form-input{
-    padding: 15px 20px;
-    background-color: #fff;
-    border: 1px solid #999999;
-    max-width: 340px;
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 18px;
+.form-control {
     font-family: 'Roboto Condensed', sans-serif;
-}
-.shopping-form-submit{
-    width: 157px;
-    height: 45px;
-    background-color: #00ade9;
-    border: none;
-    color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 22px;
-    box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.2);
-    margin-top: 15px;
-    cursor: pointer;
-}
-.shopping-form-radio{
-    padding-bottom: 20px;
 }
 .shopping-form-radio label{
     font-size: 15px;
     font-family: 'Roboto Condensed', sans-serif;
 }
+#button-guest{
+    background-color: #5F5F5F;
+ 
+    border: none;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.2);    
+    cursor: pointer;
+}
+#button-shipping-method {
+    background-color: #00ade9;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.2);    
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
 .shopping-inform{
-    padding-top: 45px;
+    padding-top: 3rem;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .shopping-inform p{
     font-size: 15px;
+    margin: 0;
 }
 .shopping-inform ul{
     padding-left: 45px;
@@ -1194,6 +1199,20 @@ tbody td {
 .shopping-inform ul li p{
     color: #0f0e0d;
 } 
+
+/* .shopping-form-input{
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid #999999;
+    max-width: 340px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+} */
+
+
+
 
 
 .table-align{
