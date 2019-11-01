@@ -1,7 +1,12 @@
 <nav class="menu navbar sticky-top navbar-expand-lg">
-    <div class="container-fluid">      
+    <div class="header-menu-wrap container-fluid">      
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="menu-btn navbar-toggler-icon">Меню</span>
+            <span class="menu-btn navbar-toggler-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    width="30" height="30"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M14.33333,35.83333v14.33333h143.33333v-14.33333zM14.33333,78.83333v14.33333h143.33333v-14.33333zM14.33333,121.83333v14.33333h143.33333v-14.33333z"></path></g></g></svg>
+            </span>
         </button>
         
         <div class="align-items-start">
@@ -10,7 +15,7 @@
             </div>
         </div>    
             
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <div class="header-menu-navigation header-disable collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
             <ul class="navbar-nav align-self-end" id="nav">
                 <ul class="inmenu navbar-nav mr-auto">
                     <li class="nav-item limenu">
@@ -27,7 +32,6 @@
                     </li>
                    <li class="nav-item limenu">
                         <a class="nav-link amenu" href="{{ hrefcart }}">{{ text_cart }} </a>
-
                     </li>
 
                 </ul>
