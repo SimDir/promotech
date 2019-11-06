@@ -255,13 +255,25 @@ body {
 
 .focus-sidebar-link {
     font-size: 14px;
-    border-left: 3px solid #45B8EB;
-    padding: 2px 10px 2px 10px;
+    
+    padding: 2px 10px 2px 20px;
+    font-style: italic;
+    color: #fff;
+}
+.focus-sidebar-link-child {
+    font-size: 10px;
+    padding: 1px 10px 1px 45px;
     font-style: italic;
     color: #fff;
 }
 .active {
     text-shadow: 3px 3px 10px #fff;
+    border-left: 6px solid #fff;
+    border-left: 3px solid #45B8EB;
+}
+.active:nth-child(2) {
+    border-left: 6px solid #fff;
+    border-left: 3px solid #45B8EB;
 }
 .sidebar-advertising{
     margin-top: 35px;
@@ -625,6 +637,23 @@ footer{
     -o-transition: all .5s;
     transition: all .5s;
 }
+.bread-text:hover{
+    color: #686888;
+    text-decoration: none;
+}
+.bread-text-last {
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    color: #7D7D7D;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; 
+}
+.bread-text-last:hover{
+    color: #686888;
+    text-decoration: none;
+}
 .bread-next{
     width: 15px;
     height: 15px;
@@ -657,10 +686,6 @@ footer{
     width: 8px;
     height: 1px;
     background-color: #7D7D7D;
-}
-.bread-text:hover{
-    color: #686888;
-    text-decoration: none;
 }
 /* товары на странице категори */
 .catalog1{
