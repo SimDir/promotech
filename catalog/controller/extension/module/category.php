@@ -41,7 +41,7 @@ class ControllerExtensionModuleCategory extends Controller {
                                     $children3 = $this->model_catalog_category->getCategories($child['category_id']);
                                     $children_data3 = array();
                                     if($children3 and $child['category_id'] == $data['child_id']){
-                                        //var_dump($children3);die();
+//                                        var_dump($children3);die();
                                         
                                         foreach($children3 as $child3) {
                                             //$filter_data = array('filter_category_id' => $child3['category_id'], 'filter_sub_category' => true);

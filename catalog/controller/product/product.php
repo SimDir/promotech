@@ -484,7 +484,7 @@ class ControllerProductProduct extends Controller {
 
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 
-			$data['description'] = strip_tags($data['description'], '<br>');
+			$data['description'] = strip_tags($data['description'], '<br><a><table><tr><td><tbody><tfoot><thead><th>');
 
 			$data['sku'] = $product_info['sku'];
 
