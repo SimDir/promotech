@@ -255,25 +255,20 @@ body {
 
 .focus-sidebar-link {
     font-size: 14px;
-    
     padding: 2px 10px 2px 20px;
     font-style: italic;
     color: #fff;
+    text-shadow: 1px 1px 10px #fff;
 }
 .focus-sidebar-link-child {
-    font-size: 10px;
+    font-size: 12px;
     padding: 1px 10px 1px 45px;
     font-style: italic;
     color: #fff;
 }
 .active {
-    text-shadow: 3px 3px 10px #fff;
-    border-left: 6px solid #fff;
     border-left: 3px solid #45B8EB;
-}
-.active:nth-child(2) {
-    border-left: 6px solid #fff;
-    border-left: 3px solid #45B8EB;
+    opacity: 0.95;
 }
 .sidebar-advertising{
     margin-top: 35px;
@@ -1358,8 +1353,13 @@ tbody td {
     box-shadow: 200px 0 0 0 rgba(66,75,83, 1) inset;
 }
 
-
-
+/* ERRORS */
+.error_text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+}
 
 
 
