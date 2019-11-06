@@ -6,9 +6,9 @@
       {% if category.children %}
         {% for child in category.children %}
           {% if child.category_id == child_id %}
-            <a href="{{ child.href }}" class="sidebar-link active">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a> 
+            <a href="{{ child.href }}" class="sidebar-link focus-sidebar-link active">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a> 
           {% else %} 
-            <a href="{{ child.href }}" class="sidebar-link">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a>
+            <a href="{{ child.href }}" class="sidebar-link focus-sidebar-link">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a>
           {% endif %}
         {% endfor %}
       {% endif %}
