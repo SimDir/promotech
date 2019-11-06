@@ -37,7 +37,7 @@
             </div>
           </a>
         {% endfor %}
-        <hr>
+        {# <hr> #}
       </div>
       
       {{ pagination }}
@@ -58,7 +58,7 @@
     </section>
   {% endif %}
   {% if not categories and not products %}
-    <p>{{ text_empty }}</p>
+    <p class="text_empty">{{ text_empty }}</p>
   </section>
 {% endif %}
 

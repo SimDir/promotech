@@ -743,6 +743,12 @@ footer{
 .catalog-block-name:hover{
     text-decoration: underline;
 }
+.text_empty {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;  
+}
 
 
 /*ПРОДУКТЫ */
