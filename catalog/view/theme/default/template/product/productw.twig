@@ -3,7 +3,9 @@
 <section class="container content">
   <div class="row">
     <div class="col-lg-3 sidebar">
-      {{ column_left }}
+      <div class="sidebar-sticky-top sticky-top">
+        {{ column_left }}
+      </div>  
     </div>
 
 
@@ -18,7 +20,7 @@
               <span class="bread-next-line-after"></span>
               </span>
           {% else %}
-              <a href="{{ breadcrumb.href }}" class="bread-link">{{ breadcrumb.text }}</a>
+              <a href="{{ breadcrumb.href }}" class="bread-text-last">{{ breadcrumb.text }}</a>
             
           {% endif %}
         {% endfor %}
