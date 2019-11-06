@@ -21,7 +21,13 @@
                     <li class="nav-item limenu">
                         <a class="nav-link amenu" href="{{ home }}">{{ text_home }} </a>
                     </li>
-                    <li class="nav-item limenu">
+                    {% for child in informationtotal %}
+                       {#{{ child.information_id }}#}
+                        <li class="nav-item limenu">
+                            <a class="nav-link amenu" href="{{ hrefmnu }}{{ child.information_id }}">{{ child.title }}</a>
+                        </li>
+                    {% endfor %}
+                    {#<li class="nav-item limenu">
                         <a class="nav-link amenu" href="{{ our_services }}" target="_blank">{{ text_our_services }}</a>
                     </li>
                     <li class="nav-item limenu">
@@ -29,7 +35,7 @@
                     </li>
                     <li class="nav-item limenu">
                         <a class="nav-link amenu" href="{{ about_company }}">{{ text_about_company }}</a>
-                    </li>
+                    </li>#}
                    <li class="nav-item limenu">
                         <a class="nav-link amenu" href="{{ hrefcart }}">{{ text_cart }} </a>
                     </li>
