@@ -38,6 +38,8 @@
   {% if childrens %}
     <div class="catalog row">
       {% for children in childrens %}
+          {#<p>{{ children.thumb }}</p>
+          <p>{{ children.name }}</p>#}
         <a class="catalog-product col-12 col-md-5" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
           <span class="catalog-product-name">{{ children.name }}</span>
           <div class="catalog-product-link"></div>
@@ -50,6 +52,9 @@
     <p>{{ text_empty }}</p>
   </section>
 {% endif %}
+
+
+
 {{ content_bottom }}</div>
 {{ column_right }}</div>
 </section>

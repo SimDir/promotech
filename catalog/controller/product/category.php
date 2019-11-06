@@ -725,8 +725,8 @@ class ControllerProductCategory extends Controller {
 			$children = $this->model_catalog_category->getCategories($category_info['category_id']);
 
 			$children_data = array();
-
-
+//                        echo '<pre>';
+//                        var_dump($children);die();
 
 			foreach($children as $child) {
 
@@ -740,8 +740,8 @@ class ControllerProductCategory extends Controller {
 
 				if ($child['image']) {
 
-					$image = $this->model_tool_image->resize($result['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
-
+                                    $image = $this->model_tool_image->resize($child['image'], $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_width'), $this->config->get('theme_' . $this->config->get('config_theme') . '_image_product_height'));
+                                    //$image='/image/'.$result['image'];
 				}
 
 
