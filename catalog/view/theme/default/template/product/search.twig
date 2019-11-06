@@ -10,12 +10,16 @@
     <section class="col-9 content-section">
       <div class="bread">
         {% for breadcrumb in breadcrumbs %}
-          <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
+          
           {% if(breadcrumb != breadcrumbs|last) %}
-            <span class="bread-text bread-next">
+              <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
+              <span class="bread-text bread-next">
               <span class="bread-next-line-before"></span>
               <span class="bread-next-line-after"></span>
-            </span>
+              </span>
+          {% else %}
+              <a href="{{ breadcrumb.href }}" class="bread-link">{{ breadcrumb.text }}</a>
+            
           {% endif %}
         {% endfor %}
       </div>
