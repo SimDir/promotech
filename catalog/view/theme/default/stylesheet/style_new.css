@@ -1,4 +1,6 @@
-
+body {
+    overflow-x: hidden;
+}
 /* header */
 .header-top-block{
     padding: 1rem 1rem;
@@ -199,10 +201,14 @@
     /* position: relative; */
 }
 /* sidebar */
+.sidebar-sticky-top {
+    top: 100px;
+}
 .sidebar{
     position: relative;
     z-index: 1;
 }
+
 .sidebar-title {
     font-family: 'Roboto Condensed', sans-serif;
     color: #fff;
@@ -250,12 +256,11 @@
 .focus-sidebar-link {
     font-size: 14px;
     border-left: 3px solid #45B8EB;
-    padding: 2px 10px 2px 25px;
+    padding: 2px 10px 2px 10px;
     font-style: italic;
     color: #fff;
 }
 .active {
-    /* border-left: 10px solid #002B41; */
     text-shadow: 3px 3px 10px #fff;
 }
 .sidebar-advertising{
@@ -1434,15 +1439,10 @@ tbody td {
 }
 @media (max-width: 991px) {
     .catalog {
-        margin: 0 6rem;
+        margin: 0 2rem;
     }
     .catalog-product {
-        width: 150px;
-        height: 200px;
-        margin: 15px 10px;
-    }
-    .catalog-product-name{
-        top: 84%;
+        margin: 15px 20px;
     }
     .sidebar {
         display: none;
