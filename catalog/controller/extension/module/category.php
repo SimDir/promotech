@@ -59,7 +59,7 @@ class ControllerExtensionModuleCategory extends Controller {
 					$children_data[] = array(
 						'category_id' => $child['category_id'],
 						'name' => $child['name'],
-                                                'children'    => $children_data3,
+                                                //'children'    => $children_data3,
 						'href' => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
 				}
