@@ -503,6 +503,7 @@ body {
 }
 
 
+
 /* FOOTER */
 footer{
     width: 100%;
@@ -803,6 +804,8 @@ footer{
     justify-content: space-between;
     -ms-align-items: center;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
 .product-img-disable{
     width: 80px;
@@ -1621,6 +1624,10 @@ tbody td {
 @media (max-width: 768px) {
     .product-img {
         margin: 0;
+    }
+    .product-img-wrap{
+        flex-wrap: wrap;
+        justify-content: start;
     }
 }
 @media (max-width: 576px) {
