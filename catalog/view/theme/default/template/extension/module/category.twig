@@ -10,6 +10,12 @@
           {% else %} 
             <a href="{{ child.href }}" class="sidebar-link focus-sidebar-link">&nbsp;&nbsp;&nbsp;- {{ child.name }}</a>
           {% endif %}
+          
+          {% if child.children %}
+              {% for child3 in child.children %}
+                  <a href="{{ child3.href }}" class="sidebar-link">&nbsp;&nbsp;&nbsp;- {{ child3.name }}</a>
+              {% endfor %}
+          {% endif %}
         {% endfor %}
       {% endif %}
     {% else %} <a href="{{ category.href }}" class="sidebar-link">{{ category.name }}</a>

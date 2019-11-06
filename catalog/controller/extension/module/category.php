@@ -34,13 +34,32 @@ class ControllerExtensionModuleCategory extends Controller {
 
 			if ($category['category_id'] == $data['category_id']) {
 				$children = $this->model_catalog_category->getCategories($category['category_id']);
-
+//                                echo '<pre>';
+                                
 				foreach($children as $child) {
+                                    
+                                    $children3 = $this->model_catalog_category->getCategories($child['category_id']);
+                                    $children_data3 = array();
+                                    if($children3){
+                                        //var_dump($children3);die();
+                                        
+                                        foreach($children3 as $child3) {
+                                            //$filter_data = array('filter_category_id' => $child3['category_id'], 'filter_sub_category' => true);
+    //                                        
+                                            $children_data3[] = array(
+                                                'category_id' => $child3['category_id'],
+                                                'name' => $child3['name'],
+                                                'href' => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child3['category_id'])
+                                            );
+                                        }
+                                    }
+                                    
 					$filter_data = array('filter_category_id' => $child['category_id'], 'filter_sub_category' => true);
-
+                                        
 					$children_data[] = array(
 						'category_id' => $child['category_id'],
 						'name' => $child['name'],
+                                                'children'    => $children_data3,
 						'href' => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
 				}
