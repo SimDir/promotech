@@ -1,0 +1,133 @@
+﻿{{ header }}
+<section class="container content">
+  <div class="row">
+    <div class="col-lg-3 sidebar">
+      <div class="sidebar-sticky-top sticky-top"> 
+       {{ column_left }}  
+      </div>   
+    </div>  
+    
+    <section class="col-12 col-lg-9 content-block">
+      <div class="bread">
+        {% for breadcrumb in breadcrumbs %}
+          
+          {% if(breadcrumb != breadcrumbs|last) %}
+              <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
+              <span class="bread-text bread-next">
+              <span class="bread-next-line-before"></span>
+              <span class="bread-next-line-after"></span>
+
+              </span>
+          {% else %}
+              <a href="{{ breadcrumb.href }}" class="bread-text-last">{{ breadcrumb.text }}</a>
+            
+          {% endif %}
+
+        {% endfor %}
+      </div>
+      {% if products %}
+          <div class="row bread_params">
+              
+              <div class="sorting col-md-6">
+                  <div class="sorting_group form-group input-group input-group-sm">
+                      <label class="sorting_group_label input-group-addon" for="input-sort">{{ text_sort }}</label>
+                      <select id="input-sort" class="form-control" onchange="location = this.value;">
+                          {% for sorts in sorts %}
+                              {% if sorts.value == '%s-%s'|format(sort, order) %}
+                                  <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
+                              {% else %}
+                                  <option value="{{ sorts.href }}">{{ sorts.text }}</option>
+                              {% endif %}
+                          {% endfor %}
+                      </select>
+                  </div>
+              </div>
+
+              <div class="show_how col-md-4">
+                  <div class="show_how_group form-group input-group input-group-sm">
+                      <label class="show_how_group_label input-group-addon" for="input-limit">{{ text_limit }}</label>
+                      <select id="input-limit" class="form-control" onchange="location = this.value;">
+                          {% for limits in limits %}
+                              {% if limits.value == limit %}
+                                  <option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
+                              {% else %}
+                                  <option value="{{ limits.href }}">{{ limits.text }}</option>
+                              {% endif %}
+                          {% endfor %}
+                      </select>
+                  </div>
+              </div>
+          </div>
+       <div class="catalog1 row">
+        {% for product in products %}
+        {#<div class="catalog-block col-5 col-lg-3">
+            <a href="{{ product.href }}" > <!-- style="background: url() top no-repeat; -->
+                <img style="width: 100%;" src="{{ product.thumb }}" alt="">
+                <span class="catalog-block-name">{{ product.name }}</span>
+                <span class="catalog-description">{{ product.description }}</span>
+                
+                <span class="catalog-price">{{ product.price }}</span>
+            </a>
+            <div class="button-group">
+                <button type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
+                
+            </div>
+        </div>  #}
+        <div class="catalog-block col-5 col-lg-3">
+            <div class="product-thumb">
+                <div class="image">
+                    <a href="{{ product.href }}">
+                        <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-fluid" />
+                    </a>
+                </div>
+                <div>
+                    <div class="caption">
+                        <a class="catalog-block-name" href="{{ product.href }}">{{ product.name }}</a>
+                        <p class="catalog-description">{{ product.description }}</p>
+                        {% if product.price %}
+                        <p class="price"> 
+                            {% if product.tax %} 
+                                <span class="price-tax"> {{ product.tax }}</span> 
+                          {% endif %} 
+                        </p>
+                        {% endif %}
+                        
+                    </div>
+                    <div class="button-group d-flex justify-content-end">
+                        <button class="sale_btn" type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {# <hr> #}
+      </div>
+      
+      {{ pagination }}
+      {# </section>   #}
+  {% endif %}
+
+      {% if childrens  %}
+    <div class="catalog row">
+      {% for children in childrens %}
+          {#<p>{{ children.thumb }}</p>
+          <p>{{ children.name }}</p>#}
+        <a class="catalog-product col-12 col-md-5" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
+          <span class="catalog-product-name">{{ children.name }}</span>
+          <div class="catalog-product-link"></div>
+        </a>
+    {# </div> #}
+      {% endfor %}
+    </section>
+  {% endif %}
+  {% if not categories and not products %}
+    <p class="text_empty">{{ text_empty }}</p>
+  </section>
+{% endif %}
+
+
+
+{{ content_bottom }}</div>
+{{ column_right }}</div>
+</section>
+{{ footer }} 

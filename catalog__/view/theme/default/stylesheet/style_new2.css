@@ -1,0 +1,10 @@
+
+
+@media (max-width: 991px) {
+    .wacart{
+        display: none;
+    } 
+/*    not_mobile{
+        display: none;
+    }*/
+}

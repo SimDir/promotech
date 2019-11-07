@@ -1,0 +1,13 @@
+<a class="acart" href="{{ cart }}">
+{% if quantity>0 %}
+
+    <div id="cart" class="mnucart" style="background-color: yellow">
+      <div class="mnunum" id="cardcaunt">{{ quantity }}</div>
+    </div>
+{% else %}
+    <div id="cart" class="mnucart" >
+        <div class="mnunum" id="cardcaunt">{{ quantity }}</div>
+    </div>
+    
+{% endif %}
+</a>

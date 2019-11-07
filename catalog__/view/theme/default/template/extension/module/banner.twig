@@ -1,0 +1,8 @@
+{% for banner in banners %}
+	<a href="{{ banner.link }}">
+		<div class="sidebar-advertising">
+			<img  src="{{ banner.image }}" alt="{{ banner.title }}">
+		</div>
+	</a>
+{% endfor %}
+

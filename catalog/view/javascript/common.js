@@ -19,6 +19,16 @@ function getURLVar(key) {
 		} else {
 			return '';
 		}
+	} else { 			// Изменения для seo_url от Русской сборки OpenCart 3x
+		var query = String(document.location.pathname).split('/');
+		if (query[query.length - 1] == 'cart') value['route'] = 'checkout/cart';
+		if (query[query.length - 1] == 'checkout') value['route'] = 'checkout/checkout';
+		
+		if (value[key]) {
+			return value[key];
+		} else {
+			return '';
+		}
 	}
 }
 
@@ -54,8 +64,7 @@ $(document).ready(function() {
 	$('#search input[name=\'search\']').parent().find('button').on('click', function() {
 		var url = $('base').attr('href') + 'index.php?route=product/search';
 
-		// var value = $('header #search input[name=\'search\']').val();
-		var value = $(this).parent().parent().find('input[name=\'search\']').val();
+		var value = $('header #search input[name=\'search\']').val();
 
 		if (value) {
 			url += '&search=' + encodeURIComponent(value);
@@ -66,7 +75,7 @@ $(document).ready(function() {
 
 	$('#search input[name=\'search\']').on('keydown', function(e) {
 		if (e.keyCode == 13) {
-			$('#search input[name=\'search\']').parent().find('button').trigger('click');
+			$('header #search input[name=\'search\']').parent().find('button').trigger('click');
 		}
 	});
 
@@ -139,7 +148,6 @@ $(document).ready(function() {
 // Cart add remove functions
 var cart = {
 	'add': function(product_id, quantity) {
-            $('#cartModal').show();
 		$.ajax({
 			url: 'index.php?route=checkout/cart/add',
 			type: 'post',
@@ -167,10 +175,8 @@ var cart = {
 					}, 100);
 
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
-                                        
-					$('#cart').load('index.php?route=common/cart/info');
-                                        
-                                        
+
+					$('#cart > ul').load('index.php?route=common/cart/info ul li');
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {

@@ -10,7 +10,7 @@ $_['text_checkout_payment_address']  = 'Шаг %s: Платежная инфор
 $_['text_checkout_shipping_address'] = 'Шаг %s: Адрес доставки';
 $_['text_checkout_shipping_method']  = 'Шаг %s: Способ доставки';
 $_['text_checkout_payment_method']   = 'Шаг %s: Способ оплаты';
-$_['text_checkout_confirm']          = 'Шаг 6: Подтверждение заказа';
+$_['text_checkout_confirm']          = 'Шаг %s: Подтверждение заказа';
 $_['text_modify']                    = 'Изменить &raquo;';
 $_['text_new_customer']              = 'Новый покупатель';
 $_['text_returning_customer']        = 'Зарегистрированный пользователь';
@@ -39,8 +39,6 @@ $_['text_week']                      = 'неделю';
 $_['text_semi_month']                = 'полмесяца';
 $_['text_month']                     = 'месяц';
 $_['text_year']                      = 'год';
-$_['text_default']                   = '-';
-$_['text_default_mail']              = '-@mail.ru';
 
 // Column
 $_['column_name']                    = 'Название товара';
@@ -56,7 +54,7 @@ $_['entry_password']                 = 'Пароль';
 $_['entry_confirm']                  = 'Подтверждение пароля';
 $_['entry_firstname']                = 'Имя';
 $_['entry_lastname']                 = 'Фамилия';
-$_['entry_telephone']                = '+7(905) 777-77-77';
+$_['entry_telephone']                = 'Телефон';
 $_['entry_address']                  = 'Выберите адрес';
 $_['entry_company']                  = 'Компания';
 $_['entry_customer_group']           = 'Тип бизнеса';

@@ -1,0 +1,40 @@
+{{ header }}
+
+<section class="container content">
+  <div class="row content-block content-width">
+    <div class="col-lg-3 sidebar">
+      <div class="sidebar-sticky-top sticky-top"> 
+        {{ column_left }}  
+      </div>
+    </div>
+    <section class="col-12 col-lg-9 content-block">
+      <div class="bread">
+        {% for breadcrumb in breadcrumbs %}
+          
+          {% if(breadcrumb != breadcrumbs|last) %}
+              <a href="{{ breadcrumb.href }}" class="bread-text bread-link">{{ breadcrumb.text }}</a>
+              <span class="bread-text bread-next">
+              <span class="bread-next-line-before"></span>
+              <span class="bread-next-line-after"></span>
+              </span>
+          {% else %}
+              <a href="{{ breadcrumb.href }}" class="bread-text-last">{{ breadcrumb.text }}</a>
+            
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="news">
+        <h1>{{ heading_title }}</h1>
+        <div class="news-wrap">
+          <div class="news-block">
+            <p class="news-text">{{ description }}</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</section>
+{{ footer }}
