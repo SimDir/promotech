@@ -95,14 +95,46 @@
           </div>
        <div class="catalog1 row">
         {% for product in products %}
-          <a href="{{ product.href }}" class="catalog-block col-5 col-lg-3" background-size: 90%;"> <!-- style="background: url() top no-repeat; -->
-            <img style="width: 100%;" src="{{ product.thumb }}" alt="">
-            <span class="catalog-block-name">{{ product.name }}</span>
-            <span class="catalog-description">{{ product.description }}</span>
-	          <span class="catalog-price">{{ product.price }}</span>
-            <div class="catalog-product-link">
+        {#<div class="catalog-block col-5 col-lg-3">
+            <a href="{{ product.href }}" > <!-- style="background: url() top no-repeat; -->
+                <img style="width: 100%;" src="{{ product.thumb }}" alt="">
+                <span class="catalog-block-name">{{ product.name }}</span>
+                <span class="catalog-description">{{ product.description }}</span>
+                
+                <span class="catalog-price">{{ product.price }}</span>
+            </a>
+            <div class="button-group">
+                <button type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
+                
             </div>
-          </a>
+        </div>  #}
+        <div class="catalog-block col-5 col-lg-3">
+            <div class="product-thumb">
+                <div class="image">
+                    <a href="{{ product.href }}">
+                        <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-fluid" />
+                    </a>
+                </div>
+                <div>
+                    <div class="caption">
+                        <h4 class="catalog-block-name"><a href="{{ product.href }}">{{ product.name }}</a></h4>
+                        <p class="catalog-description">{{ product.description }}</p>
+                        {% if product.price %}
+                        <p class="price"> 
+                            
+                            {% if product.tax %} 
+                                <span class="price-tax"> {{ product.tax }}</span> 
+                          {% endif %} 
+                        </p>
+                        {% endif %}
+                        
+                    </div>
+                    <div class="button-group">
+                        <button type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endfor %}
         {# <hr> #}
       </div>
