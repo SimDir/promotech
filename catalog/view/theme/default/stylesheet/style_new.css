@@ -741,6 +741,14 @@ footer{
     background-position-y: top;
     padding: 10px;
     border-radius: 20px;
+    
+}
+.product-thumb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .catalog-block-name{
     display: block;
