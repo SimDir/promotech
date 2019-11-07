@@ -3,7 +3,7 @@
 $_['text_search']              = 'Поиск';
 $_['text_brand']               = 'Производитель';
 $_['text_manufacturer']        = 'Производитель:';
-$_['text_model']               = 'Функционал:';
+$_['text_model']               = 'Модель:';
 $_['text_reward']              = 'Бонусные баллы:';
 $_['text_points']              = 'Цена в бонусных баллах:';
 $_['text_stock']               = 'Наличие:';
@@ -30,8 +30,6 @@ $_['text_week']                = 'недели';
 $_['text_semi_month']          = 'полмесяца';
 $_['text_month']               = 'месяц';
 $_['text_year']                = 'год';
-$_['text_add']                 = 'В корзину';
-$_['text_get_price']           = 'Запросить цену';
 
 // Entry
 $_['entry_qty']                = 'Количество';
