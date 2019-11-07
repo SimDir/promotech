@@ -1317,11 +1317,6 @@ tbody td {
 
 
 
-
-
-
-
-
 /* ФОРМА ЗАКАЗА */
 @keyframes inPopup{
     0%{
@@ -1543,14 +1538,14 @@ input.popup-input::placeholder {
         padding: 1rem 1rem 1rem 1rem;
     }
 }
+@media(max-width:370px) {
+    #search {
+        width: 180px;
+    }
+}
 @media(max-width:330px) {
     .menu {
         padding: 0;
-    }
-}
-@media(max-width:300px) {
-    #search {
-        width: 180px;
     }
 }
     
