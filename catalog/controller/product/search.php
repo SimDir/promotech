@@ -168,7 +168,7 @@ class ControllerProductSearch extends Controller {
 
 		if (isset($this->request->get['search'])) {
 
-			//$url .= '&search=' . urlencode(html_entity_decode($this->request->get['search'], ENT_QUOTES, 'UTF-8'));
+			$url .= '&search=' . urlencode(html_entity_decode($this->request->get['search'], ENT_QUOTES, 'UTF-8'));
 
 		}
 
