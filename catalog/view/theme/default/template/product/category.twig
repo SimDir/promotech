@@ -82,11 +82,10 @@
                 </div>
                 <div>
                     <div class="caption">
-                        <h4 class="catalog-block-name"><a href="{{ product.href }}">{{ product.name }}</a></h4>
+                        <a class="catalog-block-name" href="{{ product.href }}">{{ product.name }}</a>
                         <p class="catalog-description">{{ product.description }}</p>
                         {% if product.price %}
                         <p class="price"> 
-                            
                             {% if product.tax %} 
                                 <span class="price-tax"> {{ product.tax }}</span> 
                           {% endif %} 
@@ -94,8 +93,8 @@
                         {% endif %}
                         
                     </div>
-                    <div class="button-group d-flex justify-content-center">
-                        <button type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
+                    <div class="button-group d-flex justify-content-end">
+                        <button class="sale_btn" type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
                     </div>
                 </div>
             </div>
