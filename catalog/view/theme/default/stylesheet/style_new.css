@@ -91,7 +91,9 @@ body {
     height: 100%;
     transition: all 1s ease;
 }
+
 .limenu:hover {
+
     color: #005A87;
 	box-shadow: 200px 0 0 0 rgba(255,255,255, 1) inset;
 }
@@ -153,6 +155,7 @@ body {
     cursor: pointer;
     border: none;
 }
+
 .header-shopping-cart{
     position: relative;
 }
@@ -181,13 +184,6 @@ body {
     background-size: cover;
 }
 
-
-
-
-
-
-
-
 /* homepage */
 .content{
     background-color: #fff;
@@ -199,11 +195,14 @@ body {
     display: -o-flex;
     display: flex; */
     /* position: relative; */
+
 }
 /* sidebar */
 .sidebar-sticky-top {
     top: 70px;
+
 }
+/* sidebar */
 .sidebar{
     position: relative;
     z-index: 1;
@@ -253,6 +252,7 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b1ccda', endColorstr='#196a93',GradientType=1 ); 
 }
 
+
 .focus-sidebar-link {
     font-size: 14px;
     padding: 2px 10px 2px 20px;
@@ -270,6 +270,7 @@ body {
     border-left: 3px solid #45B8EB;
     opacity: 0.95;
 }
+
 .sidebar-advertising{
     margin-top: 35px;
     text-align: center;
@@ -280,7 +281,9 @@ body {
 
 
 /* content */
+
 .content-block h1{
+
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     color: #595959;
@@ -303,7 +306,9 @@ body {
 .content-slide img{
     position: relative;
     height: 100%;
+
     width: 100%;
+
 }
 .content-slide .slick-initialized .slick-slide{
     outline: none;
@@ -320,6 +325,7 @@ body {
     font-size: 45px;
     line-height: 45px;
     padding-top: 90px;
+
 }
 .content-slider-text{
     font-family: 'Geometria', sans-serif;
@@ -378,6 +384,78 @@ body {
 }
 .slick-next:after{
     top: 5.6px;
+
+}
+.content-slider-text{
+    font-family: 'Geometria', sans-serif;
+    color: #fff;
+    font-size: 26px;
+    line-height: 26px;
+} *
+.slick-prev{
+    left: 25px;
+    z-index: 9;
+}
+.slick-next{
+    right: 25px;
+}
+.slick-prev:before, .slick-next:before, .slick-prev:after, .slick-next:after{
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 20px;
+    height: 4px;
+    background-color: #fff;
+}
+.slick-prev:before{
+    top: -5.6px;
+
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    background-color: #fff;
+    opacity: 1;
+}
+
+/* продукты */
+.content-products {
+    width: 100%;
+    margin-top: 18px;
+}
+.catalog{
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    background-color: #fff;
+    opacity: 1;
+}
+.slick-prev:after{
+    top: 5.6px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top-right-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    background-color: #fff;
+    opacity: 1;
+}
+.slick-next:before{
+    top: -5.6px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    background-color: #fff;
+    opacity: 1;
+}
+.slick-next:after{
+    top: 5.6px;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
@@ -394,6 +472,8 @@ body {
     margin-top: 18px;
 }
 .catalog{
+    /* width: 80%;
+    margin: 0 auto;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -404,7 +484,8 @@ body {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     -o-flex-wrap: wrap;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; */
+
     margin: 0 4rem;
 }
 .catalog-product{
@@ -501,8 +582,6 @@ body {
 .catalog-product1:hover .catalog-product-name{
     top: 120%;
 }
-
-
 
 /* FOOTER */
 footer{
@@ -620,7 +699,6 @@ footer{
     fill: #fff;
     margin-right: 10px;
 }
-
 
 /* СТРАНИЦА КАТЕГОРИИ */
 /* путь */
@@ -1769,3 +1847,105 @@ input.popup-input::placeholder {
 
 
 
+=======
+
+
+
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+
+
+
+
+
+/* .content-product-btn-wrap{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    position: relative;
+    padding-top: 40px;
+}
+.content-product-button{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    padding: 12px 29px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.product-active-btn{
+    background-color: #005a87;
+    color: #fff;
+}
+.content-product-wrap{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 55px;
+}
+.content-product-block{
+    min-width: 250px;
+    min-height: 353px;
+    margin-bottom: 35px;
+    -webkit-transition: all .75s;
+    -o-transition: all .75s;
+    transition: all .75s;
+}
+.content-product-img{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    z-index: 999;
+}
+.content-product-link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: relative;
+    opacity: 0;
+    -webkit-transition: all .75s;
+    -o-transition: all .75s;
+    transition: all .75s;
+}
+.content-product-link svg{
+    fill: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+}
+.content-product-img:hover .content-product-link{
+    opacity: 1;
+}
+.content-product-information{
+    height: 100px;
+    overflow-y: hidden;
+    position: relative;
+} */
+/* .header-disable{
+    -webkit-animation: slideLeft .5s forwards;
+    -o-animation: slideLeft .5s forwards;
+    animation: slideLeft .5s forwards;
+} */
+>>>>>>> 02f6741dd5d61516c66cee20728b7669fc031bbf
