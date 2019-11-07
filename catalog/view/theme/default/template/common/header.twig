@@ -116,6 +116,20 @@
     </div>
 </form>
 
+<div class="modal" id="cartModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Товар добавлен в корзину!</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cartmdlclose">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script>
 $( "#RequestCallModal" ).submit(function( event ) {
     event.preventDefault();
@@ -135,6 +149,10 @@ $( "#RequestCallModal" ).submit(function( event ) {
 });
 // A $( document ).ready() block.
 $( document ).ready(function() {
+    $( "#cartmdlclose" ).click(function() {
+        $('#cartModal').hide();
+    });
+    
     msieversion();
 });
 function msieversion() 
