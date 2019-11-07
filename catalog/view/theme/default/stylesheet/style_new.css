@@ -1327,8 +1327,12 @@ tbody td {
 }
 /* сама форма */
 .popup-form{
-    border-radius: 0rem;
-    max-width: 400px;
+    border-radius: 2rem;
+    max-width: 350px;
+}
+.my-style-modal-dialog {
+    max-width: 350px;
+    border-radius: 2rem;
 }
 /* header формы */
 .header-pop-modal {
@@ -1342,20 +1346,20 @@ tbody td {
     font-size: 25px;
     text-transform: uppercase;
     color: #fff;
-}
+}   
 .cross {
     font-size: 35px;
     color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
-}
-
+}   
 /*body формы */
 .body-pop-modal {
-    background-color: #E7E7E7;
+    background-color: #005A87;
 }
 .title-input-modal{
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    color: #fff;
 }
 .popup-input{
     padding: .5rem 1rem;
@@ -1363,31 +1367,56 @@ tbody td {
     width: 100%;
     font-family: 'Roboto Condensed', sans-serif;
     background-color: #fff;
+    border: none;
+    color: #005A87;
+    box-shadow: 1px 1px 5px #fff;
 }
 .popup-textarea{
     padding: .5rem 1rem;
     max-height: 90px;
     width: 100%;
     font-size: 16px;
+    background-color: #fff;
+    border: none;
+    color: #005A87;
+    box-shadow: 1px 1px 5px #fff;
+    margin-bottom: 25px;
+}
+input.popup-input::placeholder {
+	color: #005A87;
+}
+.body-pop-modal hr {
+    width: 100%;
+    margin: 0 auto;
+	margin-bottom: 25px;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(255,255,255,0.2), rgba(255,255,255,1), rgba(255,255,255,0.2));
+    box-shadow: 0 20px 20px -20px #333;
+    margin-bottom: 0;
 }
 
 /*footer формы */
 .footer-pop-modal{
-    background-color: #D8D8D8;
+    background-color: #005A87;
     border-bottom-right-radius: 0rem;
     border-bottom-left-radius: 0rem;
+    border-top: none;
 }
 .sendbtn {
-    background-color: #005A87; 
+    background-color: #45B8EB; 
     color: #fff;
-    border: none;
-    border: 1px solid #005A87;
+    border: 1px solid #45B8EB;
+    border-radius: 0;
     transition: all 1s ease;
 }
 .sendbtn:hover {
-    color: #005A87;
+    color: #45B8EB;
     box-shadow: 200px 0 0 0 rgba(255,255,255, 1) inset;
     border: 1px solid #005A87;
+}
+.cancelbtn {
+    border-radius: 0px;
 }
 .cancelbtn:hover {
     transition: all 1s ease;
