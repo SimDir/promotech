@@ -26,69 +26,34 @@
         {% endfor %}
       </div>
       {% if products %}
-          <div class="row">
+          <div class="row bread_params">
               
-              <div class="col-md-4 col-xs-6">
-                  <div class="form-group input-group input-group-sm">
-                      <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
+              <div class="sorting col-md-6">
+                  <div class="sorting_group form-group input-group input-group-sm">
+                      <label class="sorting_group_label input-group-addon" for="input-sort">{{ text_sort }}</label>
                       <select id="input-sort" class="form-control" onchange="location = this.value;">
-
-
-
                           {% for sorts in sorts %}
                               {% if sorts.value == '%s-%s'|format(sort, order) %}
-
-
-
                                   <option value="{{ sorts.href }}" selected="selected">{{ sorts.text }}</option>
-
-
-
                               {% else %}
-
-
-
                                   <option value="{{ sorts.href }}">{{ sorts.text }}</option>
-
-
-
                               {% endif %}
                           {% endfor %}
-
-
-
                       </select>
                   </div>
               </div>
-              <div class="col-md-3 col-xs-6">
-                  <div class="form-group input-group input-group-sm">
-                      <label class="input-group-addon" for="input-limit">{{ text_limit }}</label>
+
+              <div class="show_how col-md-4">
+                  <div class="show_how_group form-group input-group input-group-sm">
+                      <label class="show_how_group_label input-group-addon" for="input-limit">{{ text_limit }}</label>
                       <select id="input-limit" class="form-control" onchange="location = this.value;">
-
-
-
                           {% for limits in limits %}
                               {% if limits.value == limit %}
-
-
-
                                   <option value="{{ limits.href }}" selected="selected">{{ limits.text }}</option>
-
-
-
                               {% else %}
-
-
-
                                   <option value="{{ limits.href }}">{{ limits.text }}</option>
-
-
-
                               {% endif %}
                           {% endfor %}
-
-
-
                       </select>
                   </div>
               </div>
