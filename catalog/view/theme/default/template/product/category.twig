@@ -25,6 +25,19 @@
 
         {% endfor %}
       </div>
+    {% if childrens  %}
+    <div class="catalog row">
+      {% for children in childrens %}
+        <a class="catalog-product col-12 col-md-5" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
+          <span class="catalog-product-name">{{ children.name }}</span>
+          <div class="catalog-product-link"></div>
+        </a>
+    
+      {% endfor %}
+    </div> 
+    {% endif %}      
+      
+      
       {% if products %}
           <div class="row bread_params">
               
@@ -60,19 +73,6 @@
           </div>
        <div class="catalog1 row">
         {% for product in products %}
-        {#<div class="catalog-block col-5 col-lg-3">
-            <a href="{{ product.href }}" > <!-- style="background: url() top no-repeat; -->
-                <img style="width: 100%;" src="{{ product.thumb }}" alt="">
-                <span class="catalog-block-name">{{ product.name }}</span>
-                <span class="catalog-description">{{ product.description }}</span>
-                
-                <span class="catalog-price">{{ product.price }}</span>
-            </a>
-            <div class="button-group">
-                <button type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
-                
-            </div>
-        </div>  #}
         <div class="catalog-block col-5 col-lg-3">
             <div class="product-thumb">
                 <div class="image">
@@ -100,26 +100,16 @@
             </div>
         </div>
         {% endfor %}
-        {# <hr> #}
+
       </div>
       
       {{ pagination }}
-      {# </section>   #}
+
   {% endif %}
 
-      {% if childrens  %}
-    <div class="catalog row">
-      {% for children in childrens %}
-          {#<p>{{ children.thumb }}</p>
-          <p>{{ children.name }}</p>#}
-        <a class="catalog-product col-12 col-md-5" style="background: url({{ children.thumb }}) top no-repeat; background-size: 90%;" href="{{ children.href }}">
-          <span class="catalog-product-name">{{ children.name }}</span>
-          <div class="catalog-product-link"></div>
-        </a>
-    {# </div> #}
-      {% endfor %}
+
     </section>
-  {% endif %}
+  
   {% if not categories and not products %}
     <p class="text_empty">{{ text_empty }}</p>
   </section>
