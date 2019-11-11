@@ -750,20 +750,27 @@ footer{
     flex-direction: column;
     justify-content: space-between;
 }
+.image {
+    width: 90%;
+    margin: 0 auto;
+}
 .catalog-block-name{
     display: block;
     width: 100%;
     color: #005a87;
     text-align: left;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
 }
 .catalog-description{
     width: 100%;
     display: inline-block;
     color: #000;
     font-size: 10px;
-    padding: 10px 0;
+    padding: 0;
     margin: 0;
+    
 }
 .catalog-price{
     text-align: right;
@@ -777,12 +784,20 @@ footer{
 }
 .price {
     margin: 0;
+
 }
 .text_empty {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 22px;
     margin-top: 20px;
     font-weight: bold;  
+}
+.sale_btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+    flex-wrap: wrap;
 }
 .sale_btn {
     border-radius: 5px;
@@ -1651,14 +1666,15 @@ input.popup-input::placeholder {
 
 /* категории */
 @media (max-width: 1200px) {
+    .catalog1{
+        justify-content: space-between;
+        margin: 0 4rem;
+    }
     .catalog-block{
         margin: 20px 20px;
     } 
 }
 @media (max-width: 991px) {
-    .catalog1{
-        margin: 0 4rem;
-    }
     .catalog-block{
         margin: 15px 15px;
     } 
@@ -1667,6 +1683,9 @@ input.popup-input::placeholder {
     .catalog1{
         margin: 0 2rem;
     }
+    .catalog-block{
+        margin: 15px 15px;
+    } 
     .bread-text {
         font-size: 15px;
     }
@@ -1678,9 +1697,6 @@ input.popup-input::placeholder {
     }
 }
 @media (max-width: 576px) {
-    .catalog1{
-        margin: 0 .5rem;
-    }
     .catalog-block{
         margin: 15px 15px;
     } 
@@ -1689,11 +1705,30 @@ input.popup-input::placeholder {
     }
 
 }
+@media (max-width: 500px) {
+    .catalog1 {
+        margin: 0 1rem;
+    }
+    .catalog-block{
+        margin: 15px 10px;
+    } 
+    .sale_btn {
+        font-size: 12px;
+    }
+    .price-tax {
+        font-size: 15px;
+    }
+
+}
 @media (max-width: 408px) {
+    .catalog1 {
+        margin: 0 2rem;
+        justify-content: center;
+    }
     .catalog-block{
         flex: 0 0 80%;
         max-width: 80%;
-        margin: 15px 35px;
+        margin: 15px 15px;
     }
 }
 
