@@ -73,7 +73,7 @@
           </div>
        <div class="catalog1 row">
         {% for product in products %}
-        <div class="catalog-block col-5 col-lg-3">
+        <div class="catalog-block col-5 col-xl-3">
             <div class="product-thumb">
                 <div class="image">
                     <a href="{{ product.href }}">
@@ -84,17 +84,19 @@
                     <div class="caption">
                         <a class="catalog-block-name" href="{{ product.href }}">{{ product.name }}</a>
                         <p class="catalog-description">{{ product.description }}</p>
-                        {% if product.price %}
-                        <p class="price"> 
-                            {% if product.tax %} 
-                                <span class="price-tax"> {{ product.tax }}</span> 
-                          {% endif %} 
-                        </p>
-                        {% endif %}
+                        
                         
                     </div>
-                    <div class="button-group d-flex justify-content-end">
+                    <div class="sale_btn-group button-group">
+                        {% if product.price %}
+                            <p class="price"> 
+                                {% if product.tax %} 
+                                    <span class="price-tax"> {{ product.tax }}</span> 
+                                {% endif %} 
+                            </p>
+                        {% endif %}
                         <button class="sale_btn" type="button" onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">{{ button_cart }}</span></button>
+                    
                     </div>
                 </div>
             </div>
