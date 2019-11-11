@@ -586,7 +586,7 @@ class ControllerProductCategory extends Controller {
 
 
 
-			$limits = array_unique(array($this->config->get('theme_' . $this->config->get('config_theme') . '_product_limit'), 20, 40, 60, 70));
+			$limits = array_unique(array($this->config->get('theme_' . $this->config->get('config_theme') . '_product_limit'), 15, 30, 60));
 
 
 
