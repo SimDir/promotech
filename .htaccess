@@ -1,3 +1,5 @@
+
+
 # 1.To use URL Alias you need to be running apache with mod_rewrite enabled.
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Credentials true
