@@ -38,7 +38,7 @@
     {% endif %}      
       
       
-      {% if products %}
+    {% if products %}
           <div class="row bread_params">
               
               <div class="sorting col-md-6">
@@ -109,17 +109,18 @@
 
   {% endif %}
 
-
+    {% if not categories and not products %}
+        <p class="text_empty">{{ text_empty }}</p>
+    {% endif %}
     </section>
   
-  {% if not categories and not products %}
-    <p class="text_empty">{{ text_empty }}</p>
-  </section>
-{% endif %}
+    
 
 
 
-{{ content_bottom }}</div>
-{{ column_right }}</div>
+{{ content_bottom }}
+</div>
+{{ column_right }}
+
 </section>
 {{ footer }} 
